@@ -44,7 +44,7 @@ myApp.use(cors());
 //     })
 // );
 
-const staticDirPath = path.resolve(__dirname, "../dist"); //dist!!
+// const staticDirPath = path.resolve(__dirname, "../dist"); //dist!!
 
 const port = process.env.PORT;
 
@@ -346,15 +346,16 @@ async function sendMessageToUser(messageData, reporter_email) {
 //     res.sendFile(path.join(__dirname, "../dist/index.html"));
 // });
 
-// myApp.get("*", function (req, res) {
-//     const route = path.resolve(__dirname, "../dist/index.html"); // only dist?
-//     res.sendFile(route);
-// });
-
-myApp.use(express.static(staticDirPath)); // para usar sin parcel
 myApp.get("*", function (req, res) {
-    res.sendFile(staticDirPath + "/index.html");
+    const route = path.resolve(__dirname, "../dist/index.html"); // only dist?
+    res.sendFile(route);
 });
+
+// const staticDirPath = path.resolve(__dirname, "../dist"); //dist!!
+// myApp.use(express.static(staticDirPath)); // para usar sin parcel
+// myApp.get("*", function (req, res) {
+//     res.sendFile(staticDirPath + "/index.html");
+// });
 
 myApp.listen(port);
 console.log("API escuchando en el puerto " + port);
