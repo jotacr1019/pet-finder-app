@@ -34,17 +34,17 @@ myApp.use(cors());
 //     next();
 // });
 
-myApp.use(
-    express.static("public", {
-        setHeaders: (res, path) => {
-            if (path.endsWith(".js")) {
-                res.setHeader("Content-Type", "application/javascript");
-            }
-        },
-    })
-);
+// myApp.use(
+//     express.static("public", {
+//         setHeaders: (res, path) => {
+//             if (path.endsWith(".js")) {
+//                 res.setHeader("Content-Type", "application/javascript");
+//             }
+//         },
+//     })
+// );
 
-// const staticDirPath = path.resolve(__dirname, "../fe-src"); //dist!!
+const staticDirPath = path.resolve(__dirname, "../dist"); //dist!!
 
 const port = process.env.PORT;
 
@@ -346,15 +346,15 @@ async function sendMessageToUser(messageData, reporter_email) {
 //     res.sendFile(path.join(__dirname, "../dist/index.html"));
 // });
 
-myApp.get("*", function (req, res) {
-    const route = path.resolve(__dirname, "../dist/index.html"); // only dist?
-    res.sendFile(route);
-});
-
-// myApp.use(express.static(staticDirPath)); // para usar sin parcel
 // myApp.get("*", function (req, res) {
-//     res.sendFile(staticDirPath + "/index.html");
+//     const route = path.resolve(__dirname, "../dist/index.html"); // only dist?
+//     res.sendFile(route);
 // });
+
+myApp.use(express.static(staticDirPath)); // para usar sin parcel
+myApp.get("*", function (req, res) {
+    res.sendFile(staticDirPath + "/index.html");
+});
 
 myApp.listen(port);
 console.log("API escuchando en el puerto " + port);
