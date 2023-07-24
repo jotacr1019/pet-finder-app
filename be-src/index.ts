@@ -29,10 +29,10 @@ let cors = require("cors");
 let myApp = express();
 myApp.use(express.json());
 myApp.use(cors());
-myApp.use((req, res, next) => {
-    res.setHeader("X-Content-Type-Options", "nosniff");
-    next();
-});
+// myApp.use((req, res, next) => {
+//     res.setHeader("X-Content-Type-Options", "nosniff");
+//     next();
+// });
 
 // const staticDirPath = path.resolve(__dirname, "../fe-src"); //dist!!
 
