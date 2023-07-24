@@ -1,0 +1,23 @@
+.root-sign-up {
+    min-width: 375px;
+    background-color: #e1faf6;
+}
+
+.container-signup {
+    width: 100%;
+    height: fit-content;
+    padding: 40px 44px;
+}
+
+.column-signup {
+    display: grid;
+    gap: 14px;
+}
+
+.container-signin {
+    gap: 4px;
+}
+
+.button-signup {
+    width: 100%;
+}

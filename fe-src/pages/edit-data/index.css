@@ -1,0 +1,24 @@
+.root-edit-data {
+    min-width: 375px;
+    background-color: #e1faf6;
+}
+
+.container_edit-data {
+    width: 100%;
+    height: fit-content;
+    padding: 30px 48px;
+}
+
+.column-edit-data {
+    display: grid;
+    gap: 6px;
+}
+
+.responsive-image {
+    width: 94%;
+    height: 30vh;
+}
+
+.button {
+    width: 100%;
+}

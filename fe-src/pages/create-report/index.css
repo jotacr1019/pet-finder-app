@@ -1,0 +1,18 @@
+.root-create-report {
+    min-width: 375px;
+    background-color: #e1faf6;
+}
+
+.container_title {
+    padding: 0px 25px;
+}
+
+.container_create-report {
+    width: 100%;
+    height: fit-content;
+    padding: 63px 48px;
+}
+
+.buttons-container-create-report {
+    gap: 18px;
+}

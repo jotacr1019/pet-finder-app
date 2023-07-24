@@ -1,0 +1,23 @@
+.root-edit-report {
+    min-width: 375px;
+    background-color: #e1faf6;
+}
+
+.container_title-edit {
+    padding: 0px 25px;
+}
+
+.container_edit-report {
+    width: 100%;
+    height: fit-content;
+    padding: 63px 48px;
+}
+
+.button {
+    text-align: center;
+    width: 100%;
+}
+
+.buttons-container_edit-report {
+    gap: 18px;
+}

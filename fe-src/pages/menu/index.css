@@ -1,0 +1,19 @@
+.root-menu {
+    min-width: 375px;
+    background-color: #e1faf6;
+}
+
+.container_menu {
+    width: 100%;
+    height: fit-content;
+    padding: 40px 44px;
+}
+
+.column-my-data {
+    display: grid;
+    gap: 75px;
+}
+
+.buttons-container_menu {
+    gap: 18px;
+}

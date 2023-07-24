@@ -1,0 +1,62 @@
+{
+    "name": "pet-finder",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "ava",
+        "dev:fe": "parcel serve ./fe-src/index.html --port 1226",
+        "dev:be": "nodemon --watch './be-src/index.ts' --exec 'ts-node ./be-src/index.ts'",
+        "dev": "concurrently --kill-others \"npm run dev:be\" \"npm run dev:fe\"",
+        "build:be": "tsc",
+        "build:fe": "",
+        "build": "npm run build:be && npm run build:fe",
+        "start": "node ./be-dist/index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "algoliasearch": "^4.17.2",
+        "ava": "^5.3.1",
+        "cloudinary": "^1.37.3",
+        "cors": "^2.8.5",
+        "dotenv": "^16.3.1",
+        "dropzone": "^6.0.0-beta.2",
+        "express": "^4.18.2",
+        "jsonwebtoken": "^9.0.0",
+        "mapbox-gl": "^2.15.0",
+        "pg": "^8.11.0",
+        "pg-hstore": "^2.3.4",
+        "resend": "^0.17.1",
+        "sequelize": "^6.32.0",
+        "ts-node": "^10.9.1"
+    },
+    "devDependencies": {
+        "assert": "^2.0.0",
+        "browserify-zlib": "^0.2.0",
+        "buffer": "^6.0.3",
+        "concurrently": "^8.2.0",
+        "crypto-browserify": "^3.12.0",
+        "events": "^3.3.0",
+        "https-browserify": "^1.0.0",
+        "nodemon": "^2.0.22",
+        "os-browserify": "^0.3.0",
+        "parcel": "^2.9.3",
+        "path-browserify": "^1.0.1",
+        "process": "^0.11.10",
+        "punycode": "^1.4.1",
+        "stream-browserify": "^3.0.0",
+        "stream-http": "^3.2.0",
+        "url": "^0.11.1",
+        "util": "^0.12.5"
+    },
+    "ava": {
+        "extensions": [
+            "ts"
+        ],
+        "require": [
+            "ts-node/register"
+        ]
+    }
+}
