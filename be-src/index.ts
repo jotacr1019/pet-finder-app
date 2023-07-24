@@ -341,22 +341,22 @@ async function sendMessageToUser(messageData, reporter_email) {
         console.error(error);
     }
 }
-myApp.use(express.static("dist"));
+myApp.use(express.static(__dirname, "../dist"));
 
 // myApp.get("*", (req, res) => {
 //     res.sendFile(path.join(__dirname, "../dist/index.html"));
 // });
 
-// myApp.get("*", function (req, res) {
-//     const route = path.resolve(__dirname, "../dist/index.html"); // only dist?
-//     res.sendFile(route);
-// });
-
-const staticDirPath = path.resolve(__dirname, "../dist"); //dist!!
-myApp.use(express.static(staticDirPath)); // para usar sin parcel
 myApp.get("*", function (req, res) {
-    res.sendFile(staticDirPath + "/index.html");
+    const route = path.resolve(__dirname, "../dist/index.html"); // only dist?
+    res.sendFile(route);
 });
+
+// const staticDirPath = path.resolve(__dirname, "../dist"); //dist!!
+// myApp.use(express.static(staticDirPath)); // para usar sin parcel
+// myApp.get("*", function (req, res) {
+//     res.sendFile(staticDirPath + "/index.html");
+// });
 
 myApp.listen(port);
 console.log("API escuchando en el puerto " + port);
