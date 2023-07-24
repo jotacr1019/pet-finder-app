@@ -13,7 +13,7 @@
         "build:be": "tsc",
         "build:fe": "parcel build ./fe-src/index.html",
         "build": "npm run build:be && npm run build:fe",
-        "start": "node ./be-dist/index.js"
+        "start": "node ./src/be-dist/index.js"
     },
     "dependencies": {
         "@types/node": "^20.4.4",
