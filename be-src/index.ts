@@ -30,7 +30,7 @@ let myApp = express();
 myApp.use(express.json());
 myApp.use(cors());
 
-const staticDirPath = path.resolve(__dirname, "../fe-src"); //dist!!
+// const staticDirPath = path.resolve(__dirname, "../fe-src"); //dist!!
 
 const port = process.env.PORT;
 
