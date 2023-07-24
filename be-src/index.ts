@@ -328,10 +328,14 @@ async function sendMessageToUser(messageData, reporter_email) {
     }
 }
 
-myApp.get("*", function (req, res) {
-    const route = path.resolve(__dirname, "../dist/index.html"); // only dist?
-    res.sendFile(route);
+myApp.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../dist/index.html"));
 });
+
+// myApp.get("*", function (req, res) {
+//     const route = path.resolve(__dirname, "../dist/index.html"); // only dist?
+//     res.sendFile(route);
+// });
 
 // myApp.use(express.static(staticDirPath)); // para usar sin parcel
 // myApp.get("*", function (req, res) {

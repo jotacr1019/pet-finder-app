@@ -1,7 +1,11 @@
 {
     "name": "pet-finder",
     "version": "1.0.0",
-    "description": "",
+    "repository": "https://github.com/jotacr1019/pet-finder-app",
+    "author": "José J. Fernáńdez",
+    "description": "App for finding pets",
+    "keywords": [],
+    "license": "ISC",
     "scripts": {
         "dev:fe": "parcel serve ./fe-src/index.html --port 1226",
         "dev:be": "nodemon --watch './be-src/index.ts' --exec 'ts-node ./be-src/index.ts'",
@@ -11,9 +15,6 @@
         "build": "npm run build:be && npm run build:fe",
         "start": "node ./be-src/index.js"
     },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
     "dependencies": {
         "@types/node": "^20.4.4",
         "algoliasearch": "^4.17.2",
