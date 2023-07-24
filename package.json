@@ -6,13 +6,16 @@
     "description": "App for finding pets",
     "keywords": [],
     "license": "ISC",
+    "resolutions": {
+        "parcel-bundler": "^2.0.0 || ^1.12.5"
+    },
     "scripts": {
         "dev:fe": "parcel serve ./fe-src/index.html --port 1226",
         "dev:be": "nodemon --watch './be-src/index.ts' --exec 'ts-node ./be-src/index.ts'",
         "dev": "concurrently --kill-others \"npm run dev:be\" \"npm run dev:fe\"",
         "build:be": "tsc ./be-src/index.ts",
         "build:fe": "parcel build ./fe-src/index.html",
-        "build": "npm run build:be && npm run build:fe",
+        "build": "npm run build:fe && npm run build:be",
         "start": "node ./be-src/index.js"
     },
     "dependencies": {
