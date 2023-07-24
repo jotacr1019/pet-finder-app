@@ -341,7 +341,7 @@ async function sendMessageToUser(messageData, reporter_email) {
         console.error(error);
     }
 }
-// myApp.use(express.static(__dirname, "../dist"));
+myApp.use(express.static("dist"));
 
 // myApp.get("*", (req, res) => {
 //     res.sendFile(path.join(__dirname, "../dist/index.html"));
