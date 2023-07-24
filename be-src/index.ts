@@ -34,6 +34,16 @@ myApp.use(cors());
 //     next();
 // });
 
+myApp.use(
+    express.static("public", {
+        setHeaders: (res, path) => {
+            if (path.endsWith(".js")) {
+                res.setHeader("Content-Type", "application/javascript");
+            }
+        },
+    })
+);
+
 // const staticDirPath = path.resolve(__dirname, "../fe-src"); //dist!!
 
 const port = process.env.PORT;
