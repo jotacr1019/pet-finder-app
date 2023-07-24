@@ -329,7 +329,7 @@ async function sendMessageToUser(messageData, reporter_email) {
 }
 
 myApp.get("*", function (req, res) {
-    const route = path.resolve(__dirname, "../fe-dist/index.html"); // only dist?
+    const route = path.resolve(__dirname, "../dist/index.html"); // only dist?
     res.sendFile(route);
 });
 

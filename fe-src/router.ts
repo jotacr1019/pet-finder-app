@@ -10,7 +10,7 @@ import { initEditReport } from "./pages/edit-report/index";
 import { initUserReportsEmpty } from "./pages/user-reports-empty/index";
 import { initFull } from "./pages/user-reports-full/index";
 
-const BASE_PATH = "/project-ppt-online"; // ??????
+const BASE_PATH = "/pet-finder-app";
 
 function isGithubPages() {
     return location.host.includes("github.io");
