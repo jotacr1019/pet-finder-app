@@ -10,10 +10,10 @@
         "dev:fe": "parcel serve ./fe-src/index.html --port 1226",
         "dev:be": "nodemon --watch './be-src/index.ts' --exec 'ts-node ./be-src/index.ts'",
         "dev": "concurrently --kill-others \"npm run dev:be\" \"npm run dev:fe\"",
-        "build:be": "tsc ./be-src/index.ts",
+        "build:be": "tsc",
         "build:fe": "parcel build ./fe-src/index.html",
         "build": "npm run build:be && npm run build:fe",
-        "start": "node ./be-src/index.js"
+        "start": "node ./be-dist/index.js"
     },
     "dependencies": {
         "@types/node": "^20.4.4",
