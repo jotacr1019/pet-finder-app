@@ -23,6 +23,7 @@ import {
 } from "./controllers/pet-controller";
 import { createReportInDB } from "./controllers/report-controller";
 import * as dotenv from "dotenv";
+import { log } from "console";
 dotenv.config();
 
 let cors = require("cors");
