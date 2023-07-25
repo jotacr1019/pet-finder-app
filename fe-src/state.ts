@@ -3,7 +3,7 @@ dotenv.config();
 const API_BASE_URL = process.env.API_BASE_URL;
 // const API_BASE_URL = "http://localhost:6008"; // env
 
-export const state = {
+const state = {
     data: {
         user: {
             userId: "",
@@ -472,3 +472,5 @@ export const state = {
         }
     },
 };
+
+export { state };

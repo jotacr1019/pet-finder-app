@@ -1,9 +1,8 @@
-import { log } from "console";
-import { mapboxClient } from "../../map-box.js";
 import { state } from "../../state";
-// import "../../components/header-menu/index";
+import { mapboxClient } from "../../map-box.js";
 const welcomeImage = require("url:../../assets/undraw_beach.png");
 const dogImage = require("url:../../assets/dog2.png");
+// import "../../components/header-menu/index";
 
 // const API_BASE_URL = "http://localhost:6008";
 
@@ -373,168 +372,168 @@ export function initWelcome(params) {
     div.className = "root-welcome";
     console.log("hola desde welcome");
 
-    // state.setState()
-    // const currentState: any = state.loadStateFromLocalStorage();
-    // // const currentState = state.getState();
-    // console.log(currentState);
+    // state.setState();
+    const currentState: any = state.loadStateFromLocalStorage();
+    // const currentState = state.getState();
+    console.log(currentState);
 
-    // openAndCloseNavbar(div);
+    openAndCloseNavbar(div);
 
-    // const datosEl: any = div.querySelector(".menu_datos");
-    // const datosBtnEl: any = div.querySelector(".btn_mis-datos");
-    // const reportesEl: any = div.querySelector(".menu_reportes");
-    // const reportesBtnEl: any = div.querySelector(".btn_reportes");
-    // const reportarEl: any = div.querySelector(".menu_reportar");
-    // const reportarBtnEl: any = div.querySelector(".btn_reportar");
+    const datosEl: any = div.querySelector(".menu_datos");
+    const datosBtnEl: any = div.querySelector(".btn_mis-datos");
+    const reportesEl: any = div.querySelector(".menu_reportes");
+    const reportesBtnEl: any = div.querySelector(".btn_reportes");
+    const reportarEl: any = div.querySelector(".menu_reportar");
+    const reportarBtnEl: any = div.querySelector(".btn_reportar");
 
-    // function handleDatosClick() {
-    //     state.setRouteFromWelcome("mis-datos");
-    //     params.goTo("/sign-in");
-    // }
-    // datosEl.addEventListener("click", handleDatosClick);
-    // datosBtnEl.addEventListener("click", handleDatosClick);
+    function handleDatosClick() {
+        state.setRouteFromWelcome("mis-datos");
+        params.goTo("/sign-in");
+    }
+    datosEl.addEventListener("click", handleDatosClick);
+    datosBtnEl.addEventListener("click", handleDatosClick);
 
-    // function handleReportesClick() {
-    //     state.setRouteFromWelcome("reportes");
-    //     params.goTo("/sign-in");
-    // }
-    // reportesEl.addEventListener("click", handleReportesClick);
-    // reportesBtnEl.addEventListener("click", handleReportesClick);
+    function handleReportesClick() {
+        state.setRouteFromWelcome("reportes");
+        params.goTo("/sign-in");
+    }
+    reportesEl.addEventListener("click", handleReportesClick);
+    reportesBtnEl.addEventListener("click", handleReportesClick);
 
-    // function handleReportarClick() {
-    //     state.setRouteFromWelcome("reportar");
-    //     params.goTo("/sign-in");
-    // }
-    // reportarEl.addEventListener("click", handleReportarClick);
-    // reportarBtnEl.addEventListener("click", handleReportarClick);
+    function handleReportarClick() {
+        state.setRouteFromWelcome("reportar");
+        params.goTo("/sign-in");
+    }
+    reportarEl.addEventListener("click", handleReportarClick);
+    reportarBtnEl.addEventListener("click", handleReportarClick);
 
-    // //
+    //
 
-    // const articleEl: any = div.querySelector(".message-article");
-    // const articleBodyEl: any = div.querySelector(".message-body");
-    // const btnClose = div.querySelector(".article_close-window");
-    // const formEl: any = div.querySelector(".welcome-form");
-    // const btnLocation: any = div.querySelector(".btn-location");
-    // const btnInfo: any = div.querySelector(".btn-info");
-    // const spanWaitEl: any = div.querySelector(".welcome_span-wait");
-    // const spanEmptyEl: any = div.querySelector(".welcome_span-empty");
-    // const btnEmptyEl = div.querySelector(".btn-empty");
-    // const columnsEl: any = div.querySelector(".columns-welcome");
+    const articleEl: any = div.querySelector(".message-article");
+    const articleBodyEl: any = div.querySelector(".message-body");
+    const btnClose = div.querySelector(".article_close-window");
+    const formEl: any = div.querySelector(".welcome-form");
+    const btnLocation: any = div.querySelector(".btn-location");
+    const btnInfo: any = div.querySelector(".btn-info");
+    const spanWaitEl: any = div.querySelector(".welcome_span-wait");
+    const spanEmptyEl: any = div.querySelector(".welcome_span-empty");
+    const btnEmptyEl = div.querySelector(".btn-empty");
+    const columnsEl: any = div.querySelector(".columns-welcome");
 
-    // btnInfo.addEventListener("click", (e) => {
-    //     e.preventDefault();
-    //     columnsEl.style.filter = "blur(4px)";
-    //     articleEl.style.display = "block";
-    //     articleBodyEl.style.height = "85%";
-    //     articleBodyEl.style.display = "flex";
-    //     articleEl.classList.add("full-screen-article");
-    //     articleEl.style.opacity = "0.96";
-    //     btnInfo.style.pointerEvents = "none";
-    //     btnLocation.style.pointerEvents = "none";
-    // });
+    btnInfo.addEventListener("click", (e) => {
+        e.preventDefault();
+        columnsEl.style.filter = "blur(4px)";
+        articleEl.style.display = "block";
+        articleBodyEl.style.height = "85%";
+        articleBodyEl.style.display = "flex";
+        articleEl.classList.add("full-screen-article");
+        articleEl.style.opacity = "0.96";
+        btnInfo.style.pointerEvents = "none";
+        btnLocation.style.pointerEvents = "none";
+    });
 
-    // btnClose.addEventListener("click", (e) => {
-    //     e.preventDefault();
-    //     articleEl.style.display = "none";
-    //     columnsEl.style.filter = "none";
-    // });
+    btnClose.addEventListener("click", (e) => {
+        e.preventDefault();
+        articleEl.style.display = "none";
+        columnsEl.style.filter = "none";
+    });
 
-    // btnEmptyEl.addEventListener("click", (e) => {
-    //     e.preventDefault();
-    //     spanEmptyEl.style.display = "none";
-    // });
+    btnEmptyEl.addEventListener("click", (e) => {
+        e.preventDefault();
+        spanEmptyEl.style.display = "none";
+    });
 
-    // btnLocation.addEventListener("click", async (e) => {
-    //     e.preventDefault();
-    //     (async function getCurrentLocation() {
-    //         try {
-    //             const currentLocation: any = await getLocationOfUser();
-    //             state.setLocationOfUser(
-    //                 currentLocation.lat,
-    //                 currentLocation.lng
-    //             );
-    //             spanWaitEl.style.display = "flex";
-    //             spanWaitEl.classList.add("full-screen");
-    //             btnLocation.style.pointerEvents = "none";
-    //             btnInfo.style.pointerEvents = "none";
-    //             datosEl.style.pointerEvents = "none";
-    //             datosBtnEl.style.pointerEvents = "none";
-    //             reportesEl.style.pointerEvents = "none";
-    //             reportesBtnEl.style.pointerEvents = "none";
-    //             reportarEl.style.pointerEvents = "none";
-    //             reportarBtnEl.style.pointerEvents = "none";
+    btnLocation.addEventListener("click", async (e) => {
+        e.preventDefault();
+        (async function getCurrentLocation() {
+            try {
+                const currentLocation: any = await getLocationOfUser();
+                state.setLocationOfUser(
+                    currentLocation.lat,
+                    currentLocation.lng
+                );
+                spanWaitEl.style.display = "flex";
+                spanWaitEl.classList.add("full-screen");
+                btnLocation.style.pointerEvents = "none";
+                btnInfo.style.pointerEvents = "none";
+                datosEl.style.pointerEvents = "none";
+                datosBtnEl.style.pointerEvents = "none";
+                reportesEl.style.pointerEvents = "none";
+                reportesBtnEl.style.pointerEvents = "none";
+                reportarEl.style.pointerEvents = "none";
+                reportarBtnEl.style.pointerEvents = "none";
 
-    //             const petsFound = await state.getPetsAroundZone(
-    //                 currentLocation.lat,
-    //                 currentLocation.lng
-    //             );
-    //             if (petsFound.length > 0) {
-    //                 currentState.petsAroundUser = petsFound;
-    //                 state.setState(currentState);
-    //                 setTimeout(() => {
-    //                     params.goTo("/home");
-    //                 }, 1000);
-    //             } else {
-    //                 spanWaitEl.style.display = "none";
-    //                 spanEmptyEl.style.display = "flex";
-    //                 spanEmptyEl.classList.add("full-screen-empty");
-    //             }
-    //         } catch (error) {
-    //             console.log(error);
-    //             spanWaitEl.style.display = "none";
-    //             btnLocation.style.display = "none";
-    //             formEl.style.display = "flex";
-    //             formEl.style.width = "100%";
-    //         }
-    //     })();
-    // });
+                const petsFound = await state.getPetsAroundZone(
+                    currentLocation.lat,
+                    currentLocation.lng
+                );
+                if (petsFound.length > 0) {
+                    currentState.petsAroundUser = petsFound;
+                    state.setState(currentState);
+                    setTimeout(() => {
+                        params.goTo("/home");
+                    }, 1000);
+                } else {
+                    spanWaitEl.style.display = "none";
+                    spanEmptyEl.style.display = "flex";
+                    spanEmptyEl.classList.add("full-screen-empty");
+                }
+            } catch (error) {
+                console.log(error);
+                spanWaitEl.style.display = "none";
+                btnLocation.style.display = "none";
+                formEl.style.display = "flex";
+                formEl.style.width = "100%";
+            }
+        })();
+    });
 
-    // async function initSearchForm(callback) {
-    //     formEl.addEventListener("submit", (e) => {
-    //         e.preventDefault();
-    //         spanWaitEl.style.display = "flex";
-    //         spanWaitEl.classList.add("full-screen");
-    //         const data = new FormData(e.target as any);
-    //         const value = Object.fromEntries(data.entries()) as any;
-    //         mapboxClient.geocodeForward(
-    //             value.location,
-    //             {
-    //                 country: "cr",
-    //                 autocomplete: true,
-    //                 language: "es",
-    //             },
-    //             function (err, data, res) {
-    //                 console.log(data);
-    //                 if (!err) callback(data.features);
-    //             }
-    //         );
-    //     });
-    // }
+    async function initSearchForm(callback) {
+        formEl.addEventListener("submit", (e) => {
+            e.preventDefault();
+            spanWaitEl.style.display = "flex";
+            spanWaitEl.classList.add("full-screen");
+            const data = new FormData(e.target as any);
+            const value = Object.fromEntries(data.entries()) as any;
+            mapboxClient.geocodeForward(
+                value.location,
+                {
+                    country: "cr",
+                    autocomplete: true,
+                    language: "es",
+                },
+                function (err, data, res) {
+                    console.log(data);
+                    if (!err) callback(data.features);
+                }
+            );
+        });
+    }
 
-    // (async function getLocationResults() {
-    //     try {
-    //         initSearchForm(async function (results) {
-    //             const firstResult = results[0];
-    //             const [lng, lat] = firstResult.geometry.coordinates;
-    //             state.setLocationOfUser(lat, lng);
-    //             const petsFound = await state.getPetsAroundZone(lat, lng);
-    //             if (petsFound.length > 0) {
-    //                 currentState.petsAroundUser = petsFound;
-    //                 state.setState(currentState);
-    //                 setTimeout(() => {
-    //                     params.goTo("/home");
-    //                 }, 1000);
-    //             } else {
-    //                 console.log("No se encontraron mascotas");
-    //                 spanWaitEl.style.display = "none";
-    //                 spanEmptyEl.style.display = "flex";
-    //                 spanEmptyEl.classList.add("full-screen-empty");
-    //             }
-    //         });
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // })();
+    (async function getLocationResults() {
+        try {
+            initSearchForm(async function (results) {
+                const firstResult = results[0];
+                const [lng, lat] = firstResult.geometry.coordinates;
+                state.setLocationOfUser(lat, lng);
+                const petsFound = await state.getPetsAroundZone(lat, lng);
+                if (petsFound.length > 0) {
+                    currentState.petsAroundUser = petsFound;
+                    state.setState(currentState);
+                    setTimeout(() => {
+                        params.goTo("/home");
+                    }, 1000);
+                } else {
+                    console.log("No se encontraron mascotas");
+                    spanWaitEl.style.display = "none";
+                    spanEmptyEl.style.display = "flex";
+                    spanEmptyEl.classList.add("full-screen-empty");
+                }
+            });
+        } catch (error) {
+            console.log(error);
+        }
+    })();
 
     return div;
 }
