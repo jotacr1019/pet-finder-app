@@ -22,14 +22,16 @@ import {
     getPetById,
 } from "./controllers/pet-controller";
 import { createReportInDB } from "./controllers/report-controller";
+let cors = require("cors");
 import * as dotenv from "dotenv";
-import { log } from "console";
 dotenv.config();
 
-let cors = require("cors");
 let myApp = express();
 myApp.use(express.json());
 myApp.use(cors());
+
+// myApp.use(express.static("../be-dist/dist"));
+
 // myApp.use((req, res, next) => {
 //     res.setHeader("X-Content-Type-Options", "nosniff");
 //     next();
@@ -47,7 +49,7 @@ myApp.use(cors());
 
 // const staticDirPath = path.resolve(__dirname, "../dist"); //dist!!
 
-const port = process.env.PORT;
+const port = process.env.PORT || 6008;
 
 const resend_api_key = process.env.RESEND_API_KEY;
 
@@ -348,16 +350,16 @@ async function sendMessageToUser(messageData, reporter_email) {
 //     res.sendFile(path.join(__dirname, "../dist/index.html"));
 // });
 
-myApp.get("*", function (req, res) {
-    const route = path.resolve(__dirname, "../dist/index.html"); // only dist?
-    res.sendFile(route);
-});
+// myApp.get("*", function (req, res) {
+//     const route = path.resolve(__dirname, "../dist/index.html"); // only dist?
+//     res.sendFile(route);
+// });
 
 // const staticDirPath = path.resolve(__dirname, "../dist"); //dist!!
-// myApp.use(express.static(staticDirPath)); // para usar sin parcel
-// myApp.get("*", function (req, res) {
-//     res.sendFile(staticDirPath + "/index.html");
-// });
+myApp.use(express.static(path.resolve(__dirname, "../../dist"))); // para usar sin parcel
+myApp.get("*", function (req, res) {
+    res.sendFile(path.resolve(__dirname, "../../dist/index.html"));
+});
 
 myApp.listen(port);
 console.log("API escuchando en el puerto " + port);
