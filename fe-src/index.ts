@@ -1,4 +1,3 @@
-import { log } from "console";
 import { initRouter } from "./router";
 const STORAGE_KEY = "pet-finder-state";
 
