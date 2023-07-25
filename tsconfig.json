@@ -9,3 +9,7 @@
     },
     "includes": ["./be-src/**/*.ts"]
 }
+
+// "resolutions": {
+//     "parcel-bundler": "^2.0.0 || ^1.12.5"
+// },

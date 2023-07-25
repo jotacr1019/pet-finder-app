@@ -6,9 +6,6 @@
     "description": "App for finding pets",
     "keywords": [],
     "license": "ISC",
-    "resolutions": {
-        "parcel-bundler": "^2.0.0 || ^1.12.5"
-    },
     "scripts": {
         "dev:fe": "parcel serve ./fe-src/index.html --port 1226",
         "dev:be": "nodemon --watch './be-src/index.ts' --exec 'ts-node ./be-src/index.ts'",

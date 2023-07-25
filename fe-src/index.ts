@@ -1,7 +1,9 @@
+import { log } from "console";
 import { initRouter } from "./router";
 const STORAGE_KEY = "pet-finder-state";
 
 (function () {
+    console.log("hola desde index");
     const containerEl = document.querySelector(".principal-container");
     initRouter(containerEl);
 

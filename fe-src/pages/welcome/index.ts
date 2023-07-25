@@ -1,3 +1,4 @@
+import { log } from "console";
 import { mapboxClient } from "../../map-box.js";
 import { state } from "../../state";
 // import "../../components/header-menu/index";
@@ -370,6 +371,7 @@ export function initWelcome(params) {
         </article>
     </div>`;
     div.className = "root-welcome";
+    console.log("hola desde welcome");
 
     // state.setState()
     const currentState: any = state.loadStateFromLocalStorage();
