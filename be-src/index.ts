@@ -30,6 +30,8 @@ let myApp = express();
 myApp.use(express.json());
 myApp.use(cors());
 
+myApp.use(express.static(path.resolve(__dirname, "../../dist"))); // para usar sin parcel
+
 // myApp.use(express.static("../be-dist/dist"));
 
 // myApp.use((req, res, next) => {
@@ -356,9 +358,9 @@ async function sendMessageToUser(messageData, reporter_email) {
 // });
 
 // const staticDirPath = path.resolve(__dirname, "../dist"); //dist!!
-myApp.use(express.static(path.resolve(__dirname, "../../dist"))); // para usar sin parcel
+// myApp.use(express.static(path.resolve(__dirname, "../../dist"))); // para usar sin parcel
 myApp.get("*", function (req, res) {
-    res.sendFile(path.resolve(__dirname, "../../dist/index.html"));
+    res.status(200).sendFile(path.resolve(__dirname, "../../dist/index.html"));
 });
 
 myApp.listen(port);

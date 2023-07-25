@@ -372,8 +372,8 @@ export function initWelcome(params) {
     div.className = "root-welcome";
 
     // state.setState()
-    const currentState: any = state.loadStateFromLocalStorage();
-    // const currentState = state.getState();
+    // const currentState: any = state.loadStateFromLocalStorage();
+    const currentState = state.getState();
     console.log(currentState);
 
     openAndCloseNavbar(div);
