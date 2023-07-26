@@ -354,8 +354,12 @@ export function initWelcome(params) {
                 }
             </style>
             <div class="message-header">
-                <p>Pet Finder App</p>
-                <button class="article_close-window is-medium" aria-label="delete"></button>
+                <p>
+                    Pet Finder App
+                </p>
+                <button class="article_close-window is-medium" aria-label="delete">
+                    X
+                </button>
             </div>
             <div class="message-body has-text-centered is-align-items-center is-size-4-tablet">
                 Una vez aceptes dar tu ubicación, "Pet Finder" iniciará una busqueda de mascotas reportadas como perdidas dentro de tu zona. O bien puedes iniciar sesión o registrarte para reportar una mascota como perdida.
@@ -436,6 +440,8 @@ export function initWelcome(params) {
         e.preventDefault();
         articleEl.style.display = "none";
         columnsEl.style.filter = "none";
+        btnInfo.style.pointerEvents = "auto";
+        btnLocation.style.pointerEvents = "auto";
     });
 
     btnEmptyEl.addEventListener("click", (e) => {

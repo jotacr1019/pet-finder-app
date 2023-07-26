@@ -27,6 +27,9 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 let myApp = express();
+let bodyParser = require("body-parser");
+myApp.use(bodyParser.urlencoded({ extended: true }));
+myApp.use(bodyParser.json());
 myApp.use(express.json());
 myApp.use(cors());
 
