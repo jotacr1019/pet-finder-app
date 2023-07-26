@@ -376,6 +376,7 @@ export function initWelcome(params) {
     div.className = "root-welcome";
     console.log("hola desde welcome");
 
+    console.log(state);
     // state.setState();
     const currentState: any = state.loadStateFromLocalStorage();
     // const currentState = state.getState();
