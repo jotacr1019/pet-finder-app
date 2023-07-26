@@ -1,8 +1,10 @@
 {
     "compilerOptions": {
         // "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        // "moduleDetection": "auto",
         "target": "ESNext",
-        "module": "CommonJS",
+        "module": "commonjs",
         "moduleResolution":"node",
         "resolveJsonModule": true,
         "outDir": "be-dist"
