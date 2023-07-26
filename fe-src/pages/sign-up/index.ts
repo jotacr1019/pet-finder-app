@@ -335,7 +335,7 @@ export function initSignUp(params) {
     </div>`;
     div.className = "root-sign-up";
 
-    // console.log(state);
+    console.log(state);
 
     openAndCloseNavbar(div);
 
