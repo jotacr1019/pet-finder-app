@@ -215,7 +215,7 @@ export function initEditPassword(params) {
                     display: none;
                 }
                 .full-screen {
-                    position: fixed;
+                    position: absolute;
                     min-width: 375px;
                     top: 50%;
                     left: 50%;
