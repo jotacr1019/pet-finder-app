@@ -2,9 +2,6 @@ import { state } from "../../state";
 import { mapboxClient } from "../../map-box.js";
 const welcomeImage = require("url:../../assets/undraw_beach.png");
 const dogImage = require("url:../../assets/dog2.png");
-// import "../../components/header-menu/index";
-
-// const API_BASE_URL = "http://localhost:6008";
 
 export function initWelcome(params) {
     const div = document.createElement("div");
@@ -74,72 +71,72 @@ export function initWelcome(params) {
         <style>
             @media(min-width: 430px) {
                 .container-welcome {
-                    padding: 40px 62px 53px 62px;
+                    padding: 35px 62px 34px 62px;
                 }
             }
             @media(min-width: 468px) {
                 .container-welcome {
-                    padding: 40px 72px 53px 72px;
+                    padding: 35px 72px 34px 72px;
                 }
             }
             @media(min-width: 502px) {
                 .container-welcome {
-                    padding: 40px 96px 53px 96px;
+                    padding: 35px 96px 34px 96px;
                 }
             }
             @media(min-width: 550px) {
                 .container-welcome {
-                    padding: 40px 116px 53px 116px;
+                    padding: 35px 116px 34px 116px;
                 }
             }
             @media(min-width: 585px) {
                 .container-welcome {
-                    padding: 40px 126px 53px 126px;
+                    padding: 35px 126px 34px 126px;
                 }
             }
             @media(min-width: 605px) {
                 .container-welcome {
-                    padding: 40px 146px 53px 146px;
+                    padding: 35px 146px 34px 146px;
                 }
             }
             @media(min-width: 648px) {
                 .container-welcome {
-                    padding: 40px 166px 53px 166px;
+                    padding: 35px 166px 34px 166px;
                 }
             }
             @media(min-width: 685px) {
                 .container-welcome {
-                    padding: 40px 186px 53px 186px;
+                    padding: 35px 186px 34px 186px;
                 }
             }
             @media(min-width: 728px) {
                 .container-welcome {
-                    padding: 40px 205px 53px 205px;
+                    padding: 35px 205px 34px 205px;
                 }
             }
             @media(min-width: 769px) {
                 .container-welcome {
-                    padding: 136px 44px;
+                    padding: 124px 44px;
                 }
             }
             @media(min-width: 850px) {
                 .container-welcome {
-                    padding: 136px 80px;
+                    padding: 124px 80px;
                 }
             }
             @media(min-width: 970px) {
                 .container-welcome {
-                    padding: 136px 110px;
+                    padding: 124px 110px;
                 }
             }
             @media(min-width: 1024px) {
                 .container-welcome {
-                    padding: 104px 130px;
+                    padding: 92px 130px;
                 }
             }
             @media(min-width: 1110px) {
                 .container-welcome {
-                    padding: 122px 160px;
+                    padding: 110px 160px;
                 }
             }
         </style>
@@ -374,13 +371,9 @@ export function initWelcome(params) {
         </article>
     </div>`;
     div.className = "root-welcome";
-    console.log("hola desde welcome");
-
     console.log(state);
-    // state.setState();
+
     const currentState: any = state.loadStateFromLocalStorage();
-    // const currentState = state.getState();
-    console.log(currentState);
 
     openAndCloseNavbar(div);
 

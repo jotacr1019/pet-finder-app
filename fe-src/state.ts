@@ -106,7 +106,7 @@ const state = {
         this.setState(currentState);
     },
 
-    setLocationOfUser(lat, lng) {
+    setLocationOfUser(lat: number, lng: number) {
         const currentState = this.getState();
         currentState.userGeoloc.lat = lat;
         currentState.userGeoloc.lng = lng;
@@ -301,7 +301,7 @@ const state = {
         }
     },
 
-    async getPetsAroundZone(lat, lng) {
+    async getPetsAroundZone(lat: number, lng: number) {
         try {
             const response = await fetch(
                 API_BASE_URL + "/pets-cerca-de?lat=" + lat + "&lng=" + lng,
