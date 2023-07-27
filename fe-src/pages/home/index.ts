@@ -182,11 +182,11 @@ export function initHome(params) {
                     transform: translate(-50%, -50%);
                     width: 45%;
                     max-width: 600px;
-                    height: 78%;
+                    height: 74%;
                     z-index: 9999;
                     background-color: white;
                     overflow: auto;
-                    gap: 8px;
+                    // gap: 8px;
                 }
                 @media (min-width: 550px) {
                     .full-screen {
