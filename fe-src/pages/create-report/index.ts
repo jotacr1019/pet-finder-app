@@ -6,8 +6,6 @@ const dogImage = require("url:../../assets/dog2.png");
 const mapImage = require("url:../../assets/imageMap.png");
 const pictureImage = require("url:../../assets/picture.png");
 
-// const API_BASE_URL = "http://localhost:6008";
-
 const cloudName = "dpnltzaxy";
 const uploadPreset = "vvtvx8pc";
 let imgDataURL;
@@ -532,14 +530,6 @@ export function initCreateReport(params) {
                     const lng = locationRes.lng;
                     imgToURLCloudinary(imgDataURL).then(
                         async (cloudinaryRes) => {
-                            // console.log({
-                            //     name,
-                            //     location,
-                            //     imageUrl: d,
-                            //     status: "missing",
-                            //     last_lat: lat,
-                            //     last_lng: lng,
-                            // });
                             const createResponse = await state.createPetInDB({
                                 name,
                                 // location,
