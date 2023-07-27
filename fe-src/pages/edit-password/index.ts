@@ -222,7 +222,7 @@ export function initEditPassword(params) {
                     transform: translate(-50%, -50%);
                     width: 45%;
                     max-width: 600px;
-                    height: 46%;
+                    height: 48%;
                     z-index: 9999;
                     background-color: white;
                     overflow: auto;
