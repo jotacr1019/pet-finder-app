@@ -169,7 +169,7 @@ export function initHome(params) {
                 }
             </style>
         </div>
-        <span class="icon-text home_span-form has-background-grey-dark is-flex-direction-column is-justify-content-space-between is-align-items-center has-text-success has-background-primary-dark px-5 pt-4 pb-6" style="display: none">
+        <span class="icon-text home_span-form has-background-grey-dark is-flex-direction-column is-align-items-center has-text-success has-background-primary-dark px-5 pt-3 pb-5" style="display: none">
             <style>
                 .hidden {
                     display: none;
@@ -182,11 +182,11 @@ export function initHome(params) {
                     transform: translate(-50%, -50%);
                     width: 45%;
                     max-width: 600px;
-                    height: 82%;
+                    height: 78%;
                     z-index: 9999;
                     background-color: white;
                     overflow: auto;
-                    gap: 12px;
+                    gap: 8px;
                 }
                 @media (min-width: 550px) {
                     .full-screen {
