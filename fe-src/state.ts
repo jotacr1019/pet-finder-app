@@ -114,7 +114,7 @@ const state = {
         };
     },
 
-    setRouteFromWelcome(RouteFromWelcome) {
+    setRouteFromWelcome(RouteFromWelcome: string) {
         const currentState = this.getState();
         currentState.RouteFromWelcome = RouteFromWelcome;
         this.setState(currentState);

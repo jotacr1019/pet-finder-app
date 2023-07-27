@@ -168,119 +168,6 @@ export function initHome(params) {
                     }
                 }
             </style>
-            <div class="card card_home has-background-black-ter">
-                <style>
-                    @media(min-width: 430px) {
-                        .card_home {
-                            min-width: 340px;
-                            max-width: 340px;
-                        }
-                    }
-                    @media(min-width: 550px) {
-                        .card_home {
-                            min-width: 380px;
-                            max-width: 380px;
-                        }
-                    }
-                    @media(min-width: 769px) {
-                        .card_home {
-                            min-width: 398px;
-                            max-width: 398px;
-                        }
-                    }
-                    @media(min-width: 1024px) {
-                        .card_home {
-                            min-width: 438px;
-                            max-width: 438px;
-                        }
-                    }
-                </style>
-                <header class="card-header is-flex is-justify-content-center">
-                    <div class="container_img-home is-flex is-justify-content-center is-align-self-center m-2">
-                        <img src="${dogImage}" alt="Pet-Finder-welcome" class="responsive-img_home">
-                            <style>
-                                @media(min-width: 550px) {
-                                    .responsive-img_home {
-                                        width: 100%;
-                                        height: 28vh;
-                                    }
-                                }
-                                @media(min-width: 769px) {
-                                    .responsive-img_home {
-                                        width: 100%;
-                                        height: 34vh;
-                                    }
-                                }
-                                @media(min-width: 930px) {
-                                    .responsive-img_home {
-                                        width: 100%;
-                                        height: 34vh;
-                                    }
-                                }
-                                @media(min-width: 1024px) {
-                                    .responsive-img_home {
-                                        width: 100%;
-                                        height: 42vh;
-                                    }
-                                }
-                        </style>
-                    </div>
-                </header>
-                <div class="card-content columns columns-home is-2 is-vcentered mx-0 py-2 px-5 is-mobile">
-                    <style>
-                        @media(min-width: 550px) {
-                            .columns-home {
-                                min-width: 380px;
-                                max-width: 380px;
-                            }
-                        }
-                        @media(min-width: 769px) {
-                            .columns-home {
-                                min-width: 398px;
-                                max-width: 398px;
-                            }
-                        }
-                        @media(min-width: 1024px) {
-                            .columns-home {
-                                min-width: 438px;
-                                max-width: 438px;
-                            }
-                        }
-                    </style>
-                    <div class="content column is-half mb-0 px-0">
-                        <h2 class="title is-3 is-size-2-tablet mb-0 has-text-danger-light">
-                            nombre
-                        </h2>
-                        <hr class="dropdown-divider has-background-grey">
-                        <br>
-                        <h3 class="subtitle is-6 is-size-5-tablet mt-1 mb-0 has-text-info-light">
-                            grecia
-                        </h3>
-                    </div>
-                    <div class="column is-half is-flex is-justify-content-center px-0 mx-3">
-                        <button class="button btn-card_home is-medium is-primary has-background-danger is-rounded">
-                            <style>
-                                @media(min-width: 430px) {
-                                    .btn-card_home {
-                                        width: 88%;
-                                        gap: 2px;
-                                    }
-                                }
-                                @media(min-width: 769px) {
-                                    .btn-card_home {
-                                        width: 85%;
-                                        gap: 6px;
-                                    }
-                                }
-                            </style>
-                            Reportar
-                            <span class="icon is-small is-right">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ededed}</style><path d="M226.5 92.9c14.3 42.9-.3 86.2-32.6 96.8s-70.1-15.6-84.4-58.5s.3-86.2 32.6-96.8s70.1 15.6 84.4 58.5zM100.4 198.6c18.9 32.4 14.3 70.1-10.2 84.1s-59.7-.9-78.5-33.3S-2.7 179.3 21.8 165.3s59.7 .9 78.5 33.3zM69.2 401.2C121.6 259.9 214.7 224 256 224s134.4 35.9 186.8 177.2c3.6 9.7 5.2 20.1 5.2 30.5v1.6c0 25.8-20.9 46.7-46.7 46.7c-11.5 0-22.9-1.4-34-4.2l-88-22c-15.3-3.8-31.3-3.8-46.6 0l-88 22c-11.1 2.8-22.5 4.2-34 4.2C84.9 480 64 459.1 64 433.3v-1.6c0-10.4 1.6-20.8 5.2-30.5zM421.8 282.7c-24.5-14-29.1-51.7-10.2-84.1s54-47.3 78.5-33.3s29.1 51.7 10.2 84.1s-54 47.3-78.5 33.3zM310.1 189.7c-32.3-10.6-46.9-53.9-32.6-96.8s52.1-69.1 84.4-58.5s46.9 53.9 32.6 96.8s-52.1 69.1-84.4 58.5z"/></svg>
-                            </span>
-                        </button>
-                    </div>
-                </div>
-            </div>
         </div>
         <span class="icon-text home_span-form has-background-grey-dark is-flex-direction-column is-justify-content-space-between is-align-items-center has-text-success has-background-primary-dark px-5 pt-4 pb-6" style="display: none">
             <style>
@@ -507,7 +394,6 @@ export function initHome(params) {
                 arrayOfPets.forEach((pet) => {
                     if (pet.id === id) {
                         state.setDataOfPet(pet);
-                        // console.log(currentState);
                     }
                 });
             });

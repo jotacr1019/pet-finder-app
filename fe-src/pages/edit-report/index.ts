@@ -461,9 +461,6 @@ export function initEditReport(params) {
     const spanInfo: any = div.querySelector(".span_edit-report-success");
     const spanWait: any = div.querySelector(".span_edit-report-wait");
 
-    // spanInfo.style.display = "flex";
-    // spanInfo.classList.add("full-screen");
-
     const myDropzone = new Dropzone(spanPhotoel, {
         url: "/falsa",
         autoProcessQueue: false,
@@ -553,17 +550,9 @@ export function initEditReport(params) {
                     const lng = locationResponse.lng;
                     imgToURLCloudinary(imgDataURL).then(
                         async (CloudinaryResponse) => {
-                            // console.log({
-                            //     name,
-                            //     location,
-                            //     imageUrl: CloudinaryResponse,
-                            //     status: "missing",
-                            //     last_lat: lat,
-                            //     last_lng: lng,
-                            // });
                             const UpdateResponse = await state.updatePetInDB({
                                 name,
-                                // location,
+                                location,
                                 imageUrl: CloudinaryResponse,
                                 status: "missing",
                                 last_lat: lat,
@@ -647,7 +636,7 @@ async function pullProfile(div) {
     const img: any = div.querySelector(".img_edit-report");
     const currentState: any = state.loadStateFromLocalStorage();
     form.name.value = currentState.pet.name;
-    form.location.value = currentState.pet.status; // location
+    form.location.value = currentState.pet.location;
     img.src = currentState.pet.imageUrl;
     imgDataURL = currentState.pet.imageUrl;
 }
