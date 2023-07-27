@@ -357,7 +357,7 @@ export function initWelcome(params) {
                 <p>
                     Pet Finder App
                 </p>
-                <button class="article_close-window is-medium" aria-label="delete">
+                <button class="delete article_close-window is-medium" aria-label="delete">
                     X
                 </button>
             </div>
