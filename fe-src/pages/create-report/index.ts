@@ -510,7 +510,7 @@ export function initCreateReport(params) {
             helpLocationEl.style.visibility = "hidden";
             helpImageEl.style.visibility = "hidden";
             const data = new FormData(e.target as any);
-            const value = Object.fromEntries(data.entries());
+            const value: any = Object.fromEntries(data.entries());
             const name = value.name;
             const location = value.location;
             if (!name) {
@@ -532,7 +532,7 @@ export function initCreateReport(params) {
                         async (cloudinaryRes) => {
                             const createResponse = await state.createPetInDB({
                                 name,
-                                // location,
+                                location,
                                 imageUrl: cloudinaryRes,
                                 status: "missing",
                                 last_lat: lat,

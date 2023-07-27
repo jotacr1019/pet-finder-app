@@ -342,7 +342,7 @@ export function initEditData(params) {
             helpEmailEl.style.visibility = "hidden";
             helpNameEl.style.visibility = "hidden";
             const data = new FormData(e.target as any);
-            const value = Object.fromEntries(data.entries());
+            const value: any = Object.fromEntries(data.entries());
             const full_name = value.name;
             const email = value.email;
             if (!full_name) {
@@ -357,15 +357,14 @@ export function initEditData(params) {
                         full_name,
                         email,
                     })
-                    .then((data) => {
-                        console.log(data);
+                    .then(() => {
+                        spanSucessEl.style.display = "flex";
+                        spanSucessEl.classList.add("full-screen");
+                        formEl.style.pointerEvents = "none";
+                        setTimeout(() => {
+                            params.goTo("/menu");
+                        }, 2000);
                     });
-                spanSucessEl.style.display = "flex";
-                spanSucessEl.classList.add("full-screen");
-                formEl.style.pointerEvents = "none";
-                setTimeout(() => {
-                    params.goTo("/menu");
-                }, 2000);
             }
         });
     })();

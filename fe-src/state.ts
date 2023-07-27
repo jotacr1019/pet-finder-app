@@ -1,7 +1,21 @@
 import * as dotenv from "dotenv";
+import { type } from "os";
 dotenv.config();
 const API_BASE_URL = process.env.API_BASE_URL;
-// const API_BASE_URL = "http://localhost:6008"; // env
+
+type userData = {
+    full_name: string;
+    email: string;
+};
+
+type petData = {
+    name: string;
+    location: string;
+    imageUrl: string;
+    status: string;
+    last_lat: number;
+    last_lng: number;
+};
 
 const state = {
     data: {
@@ -205,7 +219,7 @@ const state = {
         }
     },
 
-    async updatePasswordInDb(password) {
+    async updatePasswordInDb(password: string) {
         try {
             const currentState = this.getState();
             const response = await fetch(API_BASE_URL + "/users/password", {
@@ -241,7 +255,7 @@ const state = {
         }
     },
 
-    async updateUserInDB(userData: any) {
+    async updateUserInDB(userData: userData) {
         try {
             const currentState = this.getState();
             const response = await fetch(API_BASE_URL + "/users", {
@@ -322,7 +336,7 @@ const state = {
         }
     },
 
-    async createPetInDB(petData) {
+    async createPetInDB(petData: petData) {
         try {
             const currentState = this.getState();
             const response = await fetch(API_BASE_URL + "/pets", {

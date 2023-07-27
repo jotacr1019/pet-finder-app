@@ -437,7 +437,7 @@ export function initEditPassword(params) {
         helpConfirmPasswordEl.style.visibility = "hidden";
         const spanEl: any = div.querySelector(".span-edit");
         const data = new FormData(e.target as any);
-        const value = Object.fromEntries(data.entries());
+        const value: any = Object.fromEntries(data.entries());
         const password = value.password;
         const confirmPassword = value.confirmPassword;
         if (!password) {
