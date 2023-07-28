@@ -96,27 +96,27 @@ export function initMenu(params) {
             }
             @media(min-width: 769px) {
                 .container_menu {
-                    padding: 86px 36px 37px 0px;
+                    padding: 86px 36px 77px 0px;
                 }
             }
             @media(min-width: 850px) {
                 .container_menu {
-                    padding: 86px 54px 37px 4px;
+                    padding: 86px 54px 77px 4px;
                 }
             }
             @media(min-width: 970px) {
                 .container_menu {
-                    padding: 86px 64px 37px 6px;
+                    padding: 86px 64px 77px 6px;
                 }
             }
             @media(min-width: 1024px) {
                 .container_menu {
-                    padding: 86px 85px 33px 6px;
+                    padding: 86px 85px 73px 6px;
                 }
             }
             @media(min-width: 1110px) {
                 .container_menu {
-                    padding: 86px 140px 33px 18px;
+                    padding: 86px 140px 73px 18px;
                 }
             }
         </style>

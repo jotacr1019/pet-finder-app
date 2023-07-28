@@ -335,7 +335,7 @@ export function initWelcome(params) {
                     transform: translate(-50%, -50%);
                     width: 55%;
                     max-width: 600px;
-                    height: 55%;
+                    min-height: 55%;
                     max-height: 400px;
                     z-index: 9999;
                     background-color: white;
