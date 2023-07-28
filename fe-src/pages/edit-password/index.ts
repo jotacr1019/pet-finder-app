@@ -78,52 +78,52 @@ export function initEditPassword(params) {
         <style>
             @media(min-width: 440px) {
                 .container_edit-password {
-                    padding: 30px 64px;
+                    padding: 30px 64px 8px;
                 }
             }
             @media(min-width: 480px) {
                 .container_edit-password {
-                    padding: 30px 74px;
+                    padding: 30px 74px 8px;
                 }
             }
             @media(min-width: 565px) {
                 .container_edit-password {
-                    padding: 30px 102px;
+                    padding: 30px 102px 8px;
                 }
             }
             @media(min-width: 635px) {
                 .container_edit-password {
-                    padding: 30px 132px;
+                    padding: 30px 132px 8px;
                 }
             }
             @media(min-width: 700px) {
                 .container_edit-password {
-                    padding: 30px 164px;
+                    padding: 30px 164px 8px;
                 }
             }
             @media(min-width: 769px) {
                 .container_edit-password {
-                    padding: 130px 36px 147px 0px;
+                    padding: 130px 36px 123px 0px;
                 }
             }
             @media(min-width: 850px) {
                 .container_edit-password {
-                    padding: 130px 54px 147px 4px;
+                    padding: 130px 54px 123px 4px;
                 }
             }
             @media(min-width: 970px) {
                 .container_edit-password {
-                    padding: 130px 64px 147px 6px;
+                    padding: 130px 64px 123px 6px;
                 }
             }
             @media(min-width: 1024px) {
                 .container_edit-password {
-                    padding: 114px 85px 131px 6px;
+                    padding: 114px 85px 107px 6px;
                 }
             }
             @media(min-width: 1110px) {
                 .container_edit-password {
-                    padding: 114px 140px 131px 18px;
+                    padding: 114px 140px 107px 18px;
                 }
             }
         </style>
@@ -222,7 +222,7 @@ export function initEditPassword(params) {
                     transform: translate(-50%, -50%);
                     width: 45%;
                     max-width: 600px;
-                    height: 48%;
+                    min-height: 48%;
                     z-index: 9999;
                     background-color: white;
                     overflow: auto;
