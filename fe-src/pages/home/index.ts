@@ -182,7 +182,7 @@ export function initHome(params) {
                     transform: translate(-50%, -50%);
                     width: 45%;
                     max-width: 600px;
-                    height: 74%;
+                    min-height: 74%;
                     z-index: 9999;
                     background-color: white;
                     overflow: auto;
