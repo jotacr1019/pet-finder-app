@@ -213,14 +213,14 @@ export function initEditReport(params) {
                             Agregar foto
                         </span>
                         <style>
-                            @media(min-width: 375px) {
+                            @media(min-width: 365px) {
                                 .file-label {
-                                    width: 100%;
+                                    min-width: 100%;
                                 }
                             }
-                            @media(min-width: 375px) {
+                            @media(min-width: 365px) {
                                 .file-cta {
-                                    width: 100%;
+                                    min-width: 100%;
                                 }
                             }
                         </style>
@@ -233,14 +233,14 @@ export function initEditReport(params) {
                             Eliminar foto 
                         </span>
                         <style>
-                            @media(min-width: 375px) {
+                            @media(min-width: 365px) {
                                 .file-label {
-                                    width: 100%;
+                                    min-width: 100%;
                                 }
                             }
-                            @media(min-width: 375px) {
+                            @media(min-width: 365px) {
                                 .file-cta {
-                                    width: 100%;
+                                    min-width: 100%;
                                 }
                             }
                         </style>

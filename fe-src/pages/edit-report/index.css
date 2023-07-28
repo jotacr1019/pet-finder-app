@@ -13,6 +13,11 @@
     padding: 63px 48px;
 }
 
+.span-eliminar_edit,
+.span-foto_edit {
+    min-width: 100%;
+}
+
 .button {
     text-align: center;
     width: 100%;

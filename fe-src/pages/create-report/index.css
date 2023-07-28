@@ -13,6 +13,11 @@
     padding: 63px 48px;
 }
 
+.span-foto,
+.span-eliminar {
+    min-width: 100%;
+}
+
 .buttons-container-create-report {
     gap: 18px;
 }
