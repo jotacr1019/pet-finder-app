@@ -1,8 +1,6 @@
 import { openAndCloseNavbar } from "../welcome/index";
 import { state } from "../../state";
-const dogImage = require("url:../../assets/los-10-sonidos-principales-del-perro.jpg");
-
-const API_BASE_URL = "http://localhost:6008";
+const dogImage = require("url:../../assets/dog2.png");
 
 export function initFull(params) {
     const div = document.createElement("div");
@@ -152,9 +150,8 @@ export function initFull(params) {
                     .container_cards-reports-full {
                         flex-direction: row;
                         flex-wrap: wrap;
+                        justify-content: flex-start;
                         gap: 40px;
-                        justify-content: center;
-                        align-items: flex-start;
                     }
                 }
                 @media(min-width: 1024px) {
@@ -177,7 +174,6 @@ export function initFull(params) {
     const reportarBtnEl = div.querySelector(".btn_reportar");
     const logoutEl = div.querySelector(".menu_logout");
     const logoutBtnEl = div.querySelector(".btn_logout");
-    // const btnCardEditEl = div.querySelector(".btn-reports-full");
 
     async function handleDatosClick() {
         if (!currentState.userToken) {
