@@ -74,7 +74,7 @@ export function initHome(params) {
         </div>
     </nav>
     <div class="container_title-home">
-        <h1 class="title is-3 has-text-centered is-size-2-tablet mt-6">
+        <h1 class="title is-3 has-text-centered is-size-2-tablet mt-6 mb-3">
             Mascotas perdidas cerca
         </h1>
     </div>
@@ -82,47 +82,47 @@ export function initHome(params) {
         <style>
             @media(min-width: 430px) {
                 .container_home {
-                    padding: 40px 42px;
+                    padding: 40px 42px 175px;
                 }
             }
             @media(min-width: 468px) {
                 .container_home {
-                    padding: 40px 50px;
+                    padding: 40px 50px 175px;
                 }
             }
             @media(min-width: 510px) {
                 .container_home {
-                    padding: 40px 60px;
+                    padding: 40px 60px 175px;
                 }
             }
             @media(min-width: 550px) {
                 .container_home {
-                    padding: 40px 70px;
+                    padding: 40px 70px 162px;
                 }
             }
             @media(min-width: 605px) {
                 .container_home {
-                    padding: 40px 80px;
+                    padding: 40px 80px 162px;
                 }
             }
             @media(min-width: 640px) {
                 .container_home {
-                    padding: 40px 90px;
+                    padding: 40px 90px 162px;
                 }
             }
             @media(min-width: 665px) {
                 .container_home {
-                    padding: 40px 105px;
+                    padding: 40px 105px 162px;
                 }
             }
             @media(min-width: 702px) {
                 .container_home {
-                    padding: 40px 120px;
+                    padding: 40px 120px 162px;
                 }
             }
             @media(min-width: 742px) {
                 .container_home {
-                    padding: 40px 135px;
+                    padding: 40px 135px 162px;
                 }
             }
             @media(min-width: 769px) {

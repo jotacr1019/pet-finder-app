@@ -75,47 +75,47 @@ export function initFull(params) {
         <style>
             @media(min-width: 430px) {
                 .container-reports-full {
-                    padding: 40px 42px;
+                    padding: 40px 42px 171px;
                 }
             }
             @media(min-width: 468px) {
                 .container-reports-full {
-                    padding: 40px 50px;
+                    padding: 40px 50px 171px;
                 }
             }
             @media(min-width: 510px) {
                 .container-reports-full {
-                    padding: 40px 60px;
+                    padding: 40px 60px 171px;
                 }
             }
             @media(min-width: 550px) {
                 .container-reports-full {
-                    padding: 40px 70px;
+                    padding: 40px 70px 158px;
                 }
             }
             @media(min-width: 605px) {
                 .container-reports-full {
-                    padding: 40px 80px;
+                    padding: 40px 80px 158px;
                 }
             }
             @media(min-width: 640px) {
                 .container-reports-full {
-                    padding: 40px 90px;
+                    padding: 40px 90px 158px;
                 }
             }
             @media(min-width: 665px) {
                 .container-reports-full {
-                    padding: 40px 105px;
+                    padding: 40px 105px 158px;
                 }
             }
             @media(min-width: 702px) {
                 .container-reports-full {
-                    padding: 40px 120px;
+                    padding: 40px 120px 158px;
                 }
             }
             @media(min-width: 742px) {
                 .container-reports-full {
-                    padding: 40px 135px;
+                    padding: 40px 135px 158px;
                 }
             }
             @media(min-width: 769px) {
