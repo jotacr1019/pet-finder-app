@@ -1,7 +1,6 @@
 import { initRouter } from "./router";
 
 (function () {
-    console.log("hola desde index");
     const containerEl = document.querySelector(".principal-container");
     initRouter(containerEl);
     const STORAGE_KEY = "pet-finder-state";
@@ -11,7 +10,6 @@ import { initRouter } from "./router";
         const sessionStorageItem = sessionStorage.getItem(storageKey);
         const itemValue = localStorageItem ?? sessionStorageItem;
         if (localStorageItem !== sessionStorageItem) {
-            console.log("dentro del if de readFromStorage");
             writeToStorage(storageKey, itemValue);
         }
         return itemValue;

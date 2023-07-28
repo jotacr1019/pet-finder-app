@@ -1,7 +1,6 @@
 import * as dotenv from "dotenv";
-import { type } from "os";
-dotenv.config();
 const API_BASE_URL = process.env.API_BASE_URL;
+dotenv.config();
 
 type userData = {
     full_name: string;
@@ -157,7 +156,7 @@ const state = {
                 return token;
             }
             if (response.status === 401) {
-                console.log("Usuario o contraseña incorrectos state");
+                console.log("Usuario o contraseña incorrectos");
                 return null;
             }
         } catch (err) {
@@ -268,7 +267,6 @@ const state = {
             });
             if (response.status === 200) {
                 const data = await response.json();
-                // currentState.user.userId = data.id;
                 currentState.user.fullName = data.full_name;
                 currentState.user.email = data.email;
                 this.setState(currentState);
@@ -362,17 +360,6 @@ const state = {
         }
     },
 
-    // async getPetFromDB(petId) {
-    //     // const currentState = this.getState();
-    //     console.log(petId);
-    //     const results = await fetch(API_BASE_URL + "/pets/id", {
-    //         method: "GET",
-    //         body: JSON.stringify(petId),
-    //     });
-    //     const res = await results.json();
-    //     console.log(res);
-    // },
-
     async getPetsOfUserFromDB() {
         try {
             const currentState = this.getState();
@@ -451,7 +438,6 @@ const state = {
                 return false;
             }
             if (response.status === 200) {
-                // const data = await response.json();
                 return true;
             }
         } catch (err) {
