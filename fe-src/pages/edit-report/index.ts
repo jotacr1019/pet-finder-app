@@ -6,6 +6,7 @@ import { imgToURLCloudinary } from "../create-report/index";
 const dogImage = require("url:../../assets/dog2.png");
 const mapImage = require("url:../../assets/imageMap.png");
 const pictureImage = require("url:../../assets/picture.png");
+
 let imgDataURL;
 
 export function initEditReport(params) {

@@ -488,7 +488,6 @@ export function initCreateReport(params) {
             reader.onload = function (event) {
                 imageEl.src = file.dataURL;
                 imgDataURL = file.dataURL;
-                // console.log(imgDataURL);
             };
             reader.readAsDataURL(file);
             fileFotoEl.style.display = "none";

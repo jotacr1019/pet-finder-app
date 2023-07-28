@@ -2,7 +2,6 @@ import * as express from "express";
 import * as path from "path";
 import * as crypto from "crypto";
 import * as jwt from "jsonwebtoken";
-// import { Resend } from "resend";
 import {
     createUserAndAuthInDB,
     findUserInDB,
@@ -39,9 +38,6 @@ myApp.use(express.static(path.resolve(__dirname, "../../dist")));
 const port = process.env.PORT || 6008;
 
 const SECRET_KEY = process.env.SECRET_KEY;
-
-// const resend_api_key = process.env.RESEND_API_KEY;
-// const resend = new Resend(resend_api_key);
 
 // signup
 myApp.post("/auth", async (req, res) => {
@@ -292,32 +288,6 @@ function authMiddleware(req, res, next) {
         next();
     }
 }
-
-// async function sendMessageToUser(messageData, reporter_email) {
-//     try {
-//         await resend.emails.send({
-//             from: "Pet-Finder-App <onboarding@resend.dev>",
-//             to: [reporter_email],
-//             subject: `Reporte de ${messageData.pet_name}`,
-//             html:
-//                 messageData.message +
-//                 "<br>" +
-//                 "<br>" +
-//                 "<br>" +
-//                 "Reporte creado por " +
-//                 "<strong>" +
-//                 messageData.reporter_name +
-//                 "</strong>" +
-//                 "<br>" +
-//                 "Teléfono: " +
-//                 "<strong>" +
-//                 messageData.phone_number +
-//                 "</strong>",
-//         });
-//     } catch (error) {
-//         console.error(error);
-//     }
-// }
 
 myApp.get("*", function (req, res) {
     res.status(200).sendFile(path.resolve(__dirname, "../../dist/index.html"));
