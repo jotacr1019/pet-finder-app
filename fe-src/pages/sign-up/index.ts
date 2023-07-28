@@ -335,8 +335,6 @@ export function initSignUp(params) {
     </div>`;
     div.className = "root-sign-up";
 
-    // console.log(state);
-
     openAndCloseNavbar(div);
 
     const menuStartEl = div.querySelector(".menu_start");

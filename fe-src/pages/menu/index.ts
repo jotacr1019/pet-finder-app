@@ -185,7 +185,7 @@ export function initMenu(params) {
                         </p>    
                     </div>
                 </div>
-                <a class="subtitle sub-logout is-6 has-text-centered has-text-info">
+                <a class="subtitle subtitle-logout is-6 has-text-centered has-text-info">
                     Cerrar sesión
                 </a>
                     <style>
@@ -249,6 +249,7 @@ export function initMenu(params) {
 
     const btnPersonalData = div.querySelector(".btn-personal-data");
     const btnPassword = div.querySelector(".btn-password");
+    const logoutFinalBtn = div.querySelector(".subtitle-logout");
 
     const helpPersonalData: any = div.querySelector(".help-personal-data");
     const helpPersonalPassword: any = div.querySelector(".help-password");
@@ -267,6 +268,11 @@ export function initMenu(params) {
         } else {
             params.goTo("/edit-password");
         }
+    });
+
+    logoutFinalBtn.addEventListener("click", () => {
+        state.removeStateFromLocalStorage();
+        params.goTo("/welcome");
     });
 
     return div;
