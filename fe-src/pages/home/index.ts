@@ -402,8 +402,6 @@ export function initHome(params) {
     return div;
 }
 
-// cambiar abajo status por location!!!
-
 function createCard(pet) {
     return `
     <div class="card card_home has-background-black-ter" id="${pet.id}">
@@ -492,7 +490,7 @@ function createCard(pet) {
                 <hr class="dropdown-divider has-background-grey">
                 <br>
                 <h3 class="subtitle is-6 is-size-5-tablet mt-1 mb-0 has-text-info-light">
-                    ${pet.status}
+                    ${pet.location}
                 </h3>
             </div>
             <div class="column is-half is-flex is-justify-content-center px-0 mx-3">
