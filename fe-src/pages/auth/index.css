@@ -9,25 +9,11 @@
     padding: 40px 44px;
 }
 
-
-/* ????? btn-auth */
-
 .btn-auth {
     text-align: center;
     width: 100%;
 }
 
-.column-signup {
+.column_sign-in {
     gap: 4px;
 }
-
-
-/* .sub-1,
-.sub-2 {
-    width: 50%;
-} */
-
-
-/* .container-button {
-    text-align: center;
-} */

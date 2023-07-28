@@ -205,10 +205,10 @@ export function initSignUp(params) {
                             Este campo es necesario
                         </p>
                     </div>
-                    <div class="columns container-signin is-flex is-flex-direction-row is-justify-content-center mt-4">
+                    <div class="columns container_sign-up is-flex is-flex-direction-row is-justify-content-center mt-4">
                         <style>
                             @media(min-width: 768px) {
-                                .container-signin {
+                                .container_sign-up {
                                     gap: 6px;
                                 }
                         }

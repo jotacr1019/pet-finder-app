@@ -175,10 +175,10 @@ export function initAuth(params) {
                             Este campo es necesario
                         </p>
                         </div>
-                    <div class="columns column-signup is-flex is-flex-direction-row is-justify-content-center">
+                    <div class="columns column_sign-in is-flex is-flex-direction-row is-justify-content-center">
                         <style>
                             @media(min-width: 769px) {
-                                .column-signup {
+                                .column_sign-in {
                                     gap: 6px;
                                 }
                             }
