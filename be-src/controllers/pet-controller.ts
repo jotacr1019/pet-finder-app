@@ -11,7 +11,7 @@ export async function createPetInDB(userId, petData) {
             imageUrl: petData.imageUrl,
             last_lat: petData.last_lat,
             last_lng: petData.last_lng,
-            //location ????
+            location: petData.location,
             status: petData.status,
             userId: userId,
         });
@@ -37,7 +37,7 @@ export async function updatePetData(petData, indexItem) {
     }
     const completedUpdateData = {
         name: petData.name,
-        // location: petData.location,
+        location: petData.location,
         imageUrl: petData.imageUrl,
         last_lat: petData.last_lat,
         last_lng: petData.last_lng,

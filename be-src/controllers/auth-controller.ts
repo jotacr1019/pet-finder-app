@@ -49,7 +49,6 @@ export async function updateUserPasswordInDB(
     } else {
         return null;
     }
-    // return completedUpdatePassword;
 }
 
 export async function validatePassword(password, userId) {

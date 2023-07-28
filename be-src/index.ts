@@ -22,10 +22,10 @@ import {
     getPetById,
 } from "./controllers/pet-controller";
 import { createReportInDB } from "./controllers/report-controller";
-let cors = require("cors");
 import * as dotenv from "dotenv";
 dotenv.config();
 
+let cors = require("cors");
 let myApp = express();
 let bodyParser = require("body-parser");
 myApp.use(bodyParser.urlencoded({ extended: true }));
@@ -33,33 +33,13 @@ myApp.use(bodyParser.json());
 myApp.use(express.json());
 myApp.use(cors());
 
-myApp.use(express.static(path.resolve(__dirname, "../../dist"))); // para usar sin parcel
-
-// myApp.use(express.static("../be-dist/dist"));
-
-// myApp.use((req, res, next) => {
-//     res.setHeader("X-Content-Type-Options", "nosniff");
-//     next();
-// });
-
-// myApp.use(
-//     express.static("public", {
-//         setHeaders: (res, path) => {
-//             if (path.endsWith(".js")) {
-//                 res.setHeader("Content-Type", "application/javascript");
-//             }
-//         },
-//     })
-// );
-
-// const staticDirPath = path.resolve(__dirname, "../dist"); //dist!!
+myApp.use(express.static(path.resolve(__dirname, "../../dist")));
 
 const port = process.env.PORT || 6008;
 
-const resend_api_key = process.env.RESEND_API_KEY;
-
 const SECRET_KEY = process.env.SECRET_KEY;
 
+const resend_api_key = process.env.RESEND_API_KEY;
 const resend = new Resend(resend_api_key);
 
 // signup
@@ -79,7 +59,6 @@ myApp.post("/auth", async (req, res) => {
 myApp.post("/auth/token", async (req, res) => {
     const { email, password } = req.body;
     const tokenOfUser = await authUserAndCreateToken(email, password);
-    console.log({ tokenOfUser: tokenOfUser });
     if (tokenOfUser === null) {
         res.status(401).json({
             message: "Usuario o contraseña incorrectos index",
@@ -94,7 +73,6 @@ myApp.post("/auth/password", async (req, res) => {
     const userId = req.body.userId;
     const password = req.body.password;
     const validationResponse = await validatePassword(password, userId);
-    console.log({ validationResponse });
     if (validationResponse) {
         res.status(200).json(validationResponse);
     } else {
@@ -113,7 +91,6 @@ myApp.get("/users", authMiddleware, async (req, res) => {
     } else {
         const userId = req._user.id;
         const userFound = await findUserInDB(userId);
-        console.log(userFound);
         res.status(302).json(userFound);
     }
 });
@@ -132,7 +109,6 @@ myApp.put("/users", authMiddleware, async (req, res) => {
             });
         }
         const userUpdated = await updateUserInDB(userId, req.body);
-        console.log({ userUpdated: userUpdated });
         res.status(200).json(userUpdated);
     }
 });
@@ -184,14 +160,6 @@ myApp.post("/pets", authMiddleware, async (req, res) => {
         }
     }
 });
-
-// get pet
-// myApp.get("/pets/id", async (req, res) => {
-//     const petId = req.body.petId;
-//     const petFound = await getPetById(petId);
-//     console.log({ petFound: petFound });
-//     res.json(petFound);
-// });
 
 // get pets
 myApp.get("/pets", async (req, res) => {
@@ -326,7 +294,7 @@ function authMiddleware(req, res, next) {
 
 async function sendMessageToUser(messageData, reporter_email) {
     try {
-        const data = await resend.emails.send({
+        await resend.emails.send({
             from: "Pet-Finder-App <onboarding@resend.dev>",
             to: [reporter_email],
             subject: `Reporte de ${messageData.pet_name}`,
@@ -349,19 +317,7 @@ async function sendMessageToUser(messageData, reporter_email) {
         console.error(error);
     }
 }
-// myApp.use(express.static("dist"));
 
-// myApp.get("*", (req, res) => {
-//     res.sendFile(path.join(__dirname, "../dist/index.html"));
-// });
-
-// myApp.get("*", function (req, res) {
-//     const route = path.resolve(__dirname, "../dist/index.html"); // only dist?
-//     res.sendFile(route);
-// });
-
-// const staticDirPath = path.resolve(__dirname, "../dist"); //dist!!
-// myApp.use(express.static(path.resolve(__dirname, "../../dist"))); // para usar sin parcel
 myApp.get("*", function (req, res) {
     res.status(200).sendFile(path.resolve(__dirname, "../../dist/index.html"));
 });

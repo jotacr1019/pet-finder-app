@@ -1,8 +1,6 @@
 {
     "compilerOptions": {
-        // "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
-        // "moduleDetection": "auto",
         "target": "ESNext",
         "module": "commonjs",
         "moduleResolution":"node",
@@ -11,7 +9,3 @@
     },
     "includes": ["./be-src/**/*.ts"]
 }
-
-// "resolutions": {
-//     "parcel-bundler": "^2.0.0 || ^1.12.5"
-// },

@@ -9,7 +9,10 @@ Pet.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        // crear location
+        location: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         imageUrl: {
             type: DataTypes.STRING,
             allowNull: false,
