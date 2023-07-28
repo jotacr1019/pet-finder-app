@@ -212,12 +212,12 @@ export function initCreateReport(params) {
                         <style>
                             @media(min-width: 375px) {
                                 .file-label {
-                                    width: 100%;
+                                    min-width: 100%;
                                 }
                             }
                             @media(min-width: 375px) {
                                 .file-cta {
-                                    width: 100%;
+                                    min-width: 100%;
                                 }
                             }
                         </style>
@@ -274,7 +274,7 @@ export function initCreateReport(params) {
             </div>
         </form>
         <button class="button mt-5 has-text-white has-background-grey has-text-centered">
-                    Cancelar
+            Cancelar
         </button>
         <span class="icon-text span-create-report_success is-justify-content-center is-align-items-center has-text-success has-background-primary-dark" style="display: none">
             <style>
