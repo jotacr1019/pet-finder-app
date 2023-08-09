@@ -136,7 +136,7 @@ export function initCreateReport(params) {
             }
         </style>
         <form class="form_create-report">    
-            <div class="field">
+            <div class="field has-text-right">
                 <label class="label">Nombre</label>
                 <div class="control has-icons-left">
                     <input class="input" name="name" type="text" placeholder="Ingresa nombre de la mascota">
@@ -250,7 +250,7 @@ export function initCreateReport(params) {
             <p class="subtitle is-6 has-text-centered">
                 Buscá un punto de referencia para reportar la mascota. Por ejemplo, la ubicación donde lo viste por última vez.
             </p>
-            <div class="field mb-5">
+            <div class="field mb-5 has-text-right">
                 <label class="label">Ubicación</label>
                 <div class="control has-icons-left">
                     <input class="input" type="text" name="location" placeholder="Ingresa la ubicación">
