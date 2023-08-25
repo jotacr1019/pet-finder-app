@@ -42,9 +42,9 @@ const SECRET_KEY = process.env.SECRET_KEY;
 // signup
 myApp.post("/auth", async (req, res) => {
     const user = req.body;
-    const { newUser, token } = await createUserAndAuthInDB(user);
+    const newUser = await createUserAndAuthInDB(user);
     if (newUser) {
-        res.status(201).json({ newUser, token });
+        res.status(201).json(newUser);
     } else {
         res.status(500).json({
             message: "No se logró crear el usuario",

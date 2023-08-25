@@ -177,10 +177,9 @@ const state = {
             });
             if (response.status === 201) {
                 const data = await response.json();
-                currentState.user.userId = data.newUser.id;
-                currentState.user.fullName = data.newUser.full_name;
-                currentState.user.email = data.newUser.email;
-                currentState.userToken = data.token;
+                currentState.user.userId = data.id;
+                currentState.user.fullName = data.full_name;
+                currentState.user.email = data.email;
                 this.setState(currentState);
                 return data;
             }
