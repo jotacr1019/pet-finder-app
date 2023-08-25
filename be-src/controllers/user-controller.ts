@@ -1,5 +1,10 @@
 import { User, Auth } from "../models/index";
 import { getSHA256ofString } from "../index";
+import { jwt } from "../index";
+import * as dotenv from "dotenv";
+dotenv.config();
+
+const SECRET_KEY = process.env.SECRET_KEY;
 
 export async function createUserAndAuthInDB(dataBody) {
     if (!dataBody) {
@@ -20,7 +25,8 @@ export async function createUserAndAuthInDB(dataBody) {
             password: getSHA256ofString(dataBody.password),
         },
     });
-    return newUser;
+    const token = jwt.sign({ id: newUser.get("id") }, SECRET_KEY);
+    return { newUser, token };
 }
 
 export async function findUserInDB(userId: number) {
