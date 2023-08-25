@@ -233,9 +233,6 @@ const state = {
                 }),
             });
             if (response.status === 200) {
-                const data = await response.json();
-                currentState.userToken = data;
-                this.setState(currentState);
                 return true;
             }
             if (response.status === 401) {

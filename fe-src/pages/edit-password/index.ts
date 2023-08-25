@@ -455,12 +455,17 @@ export function initEditPassword(params) {
                 helpConfirmPasswordEl.style.visibility = "hidden";
                 const updateResponse = await state.updatePasswordInDb(password);
                 if (updateResponse) {
+                    helpPasswordEl.style.visibility = "hidden";
                     spanSuccessEl.style.display = "flex";
                     spanSuccessEl.classList.add("full-screen-sucess");
                     formEl.style.pointerEvents = "none";
                     setTimeout(() => {
                         params.goTo("/menu");
                     }, 1500);
+                } else {
+                    helpPasswordEl.innerHTML =
+                        "No se pudo actualizar la contraseña";
+                    helpPasswordEl.style.visibility = "visible";
                 }
             }
         }

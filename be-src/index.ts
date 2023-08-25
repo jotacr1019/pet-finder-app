@@ -56,6 +56,7 @@ myApp.post("/auth", async (req, res) => {
 myApp.post("/auth/token", async (req, res) => {
     const { email, password } = req.body;
     const tokenOfUser = await authUserAndCreateToken(email, password);
+    console.log(tokenOfUser);
     if (tokenOfUser === null) {
         res.status(401).json({
             message: "Usuario o contraseña incorrectos index",
@@ -128,11 +129,9 @@ myApp.put("/users/password", authMiddleware, async (req, res) => {
                 req.body.password
             );
             if (tokenReturn) {
-                res.status(200).json(tokenReturn);
+                res.status(200).json(true);
             } else {
-                res.status(500).json({
-                    message: "No se logró actualizar el password",
-                });
+                res.status(500).json(false);
             }
         }
     }

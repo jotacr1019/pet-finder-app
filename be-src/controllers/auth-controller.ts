@@ -2,6 +2,7 @@ import { Auth } from "../models/index";
 import { getSHA256ofString } from "../index";
 import { jwt } from "../index";
 import * as dotenv from "dotenv";
+import { log } from "console";
 dotenv.config();
 
 const SECRET_KEY = process.env.SECRET_KEY;
@@ -35,17 +36,18 @@ export async function updateUserPasswordInDB(
     if (!newPassword) {
         throw new Error("Se requiere una contraseña");
     }
-    const completedUpdatePassword = {
-        newHashedPassword: getSHA256ofString(newPassword),
-    };
-    const userUpdated = await Auth.update(completedUpdatePassword, {
-        where: {
-            id: userId,
-        },
-    });
+    const completedUpdatePassword = getSHA256ofString(newPassword);
+
+    const userUpdated = await Auth.update(
+        { password: completedUpdatePassword },
+        {
+            where: {
+                user_id: userId,
+            },
+        }
+    );
     if (userUpdated) {
-        const token = jwt.sign({ id: userId }, SECRET_KEY);
-        return token;
+        return true;
     } else {
         return null;
     }
