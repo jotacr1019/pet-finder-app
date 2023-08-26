@@ -2,7 +2,6 @@ import { Auth } from "../models/index";
 import { getSHA256ofString } from "../index";
 import { jwt } from "../index";
 import * as dotenv from "dotenv";
-import { log } from "console";
 dotenv.config();
 
 const SECRET_KEY = process.env.SECRET_KEY;

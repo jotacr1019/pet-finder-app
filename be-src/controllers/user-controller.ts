@@ -35,7 +35,6 @@ export async function findUserInDB(userId: number) {
 }
 
 export async function updateUserInDB(userId: number, userData) {
-    console.log({ "user-data": userData });
     if (!userId) {
         throw new Error("Id de usuario requerido");
     }

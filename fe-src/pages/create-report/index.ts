@@ -273,7 +273,7 @@ export function initCreateReport(params) {
                 </div>
             </div>
         </form>
-        <button class="button mt-5 has-text-white has-background-grey has-text-centered">
+        <button class="button btn-Cancel mt-5 has-text-white has-background-grey has-text-centered">
             Cancelar
         </button>
         <span class="icon-text span-create-report_success is-justify-content-center is-align-items-center has-text-success has-background-primary-dark" style="display: none">
@@ -436,6 +436,7 @@ export function initCreateReport(params) {
     const helpImageEl: any = div.querySelector(".help-image");
     const helpLocationEl: any = div.querySelector(".help-location");
     const helpErrorEl: any = div.querySelector(".help-error");
+    const btnCancelEl: any = div.querySelector(".btn-Cancel");
 
     const spanInfo: any = div.querySelector(".span-create-report_success");
     const spanWait: any = div.querySelector(".span-create-report_wait");
@@ -554,6 +555,12 @@ export function initCreateReport(params) {
             }
         });
     })();
+
+    btnCancelEl.addEventListener("click", (e) => {
+        e.preventDefault();
+        formEl.reset();
+        params.goTo("/menu");
+    });
 
     return div;
 }

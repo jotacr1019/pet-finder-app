@@ -56,7 +56,6 @@ myApp.post("/auth", async (req, res) => {
 myApp.post("/auth/token", async (req, res) => {
     const { email, password } = req.body;
     const tokenOfUser = await authUserAndCreateToken(email, password);
-    console.log(tokenOfUser);
     if (tokenOfUser === null) {
         res.status(401).json({
             message: "Usuario o contraseña incorrectos index",
