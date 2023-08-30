@@ -155,6 +155,16 @@ myApp.post("/pets", authMiddleware, async (req, res) => {
             });
         } else {
             const petData = req.body;
+
+            if (req.method === "OPTIONS") {
+                res.header("Access-Control-Allow-Methods", "POST");
+                res.header(
+                    "Access-Control-Allow-Headers",
+                    "Content-Type, Authorization"
+                );
+                return res.status(204).send();
+            }
+
             const newPet = await createPetInDB(userId, petData);
             res.status(201).json(newPet);
         }
