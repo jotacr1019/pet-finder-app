@@ -619,9 +619,17 @@ export function initEditReport(params) {
             spanTextEl.innerHTML = "Reporte borrado";
             spanInfo.style.display = "flex";
             spanInfo.classList.add("full-screen");
-            setTimeout(() => {
-                params.goTo("/user-reports-full");
-            }, 2000);
+
+            const getPetsResponse = await state.getPetsOfUserFromDB();
+            if (getPetsResponse) {
+                setTimeout(() => {
+                    params.goTo("/user-reports-full");
+                }, 1000);
+            } else {
+                setTimeout(() => {
+                    params.goTo("/user-reports-empty");
+                }, 1000);
+            }
         } else {
             spanWait.style.display = "none";
             helpErrorEl.style.visibility = "visible";

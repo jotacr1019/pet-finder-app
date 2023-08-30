@@ -69,6 +69,9 @@ export async function deletePetDataFromDB(petId) {
             id: petId,
         },
     });
+
+    await index.deleteObject(petId.toString());
+
     return deletedPet;
 }
 

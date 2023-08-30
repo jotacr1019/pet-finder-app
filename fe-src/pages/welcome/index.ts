@@ -467,7 +467,6 @@ export function initWelcome(params) {
                     currentLocation.lat,
                     currentLocation.lng
                 );
-                console.log(petsFound);
                 if (petsFound.length > 0) {
                     currentState.petsAroundUser = petsFound;
                     state.setState(currentState);

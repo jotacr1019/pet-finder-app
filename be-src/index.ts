@@ -256,17 +256,11 @@ function bodyToIndex(body, id?) {
     if (body.name) {
         response.name = body.name;
     }
-    if (body.imageUrl) {
-        response.imageUrl = body.imageUrl;
-    }
     if (body.last_lat && body.last_lng) {
         response._geoloc = {
             lat: body.last_lat,
             lng: body.last_lng,
         };
-        if (body.status) {
-            response.status = body.status;
-        }
     }
     if (body.id) {
         response.objectID = body.id;
