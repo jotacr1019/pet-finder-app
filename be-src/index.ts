@@ -33,6 +33,7 @@ myApp.use(bodyParser.json());
 myApp.use(express.json());
 myApp.use(
     cors({
+        origin: "http://127.0.0.1:8080",
         methods: ["GET", "POST", "PUT", "DELETE"],
     })
 );
