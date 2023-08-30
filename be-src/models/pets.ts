@@ -14,7 +14,7 @@ Pet.init(
             allowNull: false,
         },
         imageUrl: {
-            type: DataTypes.STRING,
+            type: DataTypes.ARRAY(DataTypes.STRING),
             allowNull: false,
         },
         last_lat: {

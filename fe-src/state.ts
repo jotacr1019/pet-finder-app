@@ -10,7 +10,7 @@ type userData = {
 type petData = {
     name: string;
     location: string;
-    imageUrl: string;
+    imageUrl: [];
     status: string;
     last_lat: number;
     last_lng: number;

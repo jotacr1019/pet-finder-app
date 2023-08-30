@@ -550,7 +550,7 @@ export function initEditReport(params) {
                     const lat = locationResponse.lat;
                     const lng = locationResponse.lng;
                     imgToURLCloudinary(imgDataURL).then(
-                        async (CloudinaryResponse) => {
+                        async (CloudinaryResponse: any) => {
                             const UpdateResponse = await state.updatePetInDB({
                                 name,
                                 location,
@@ -639,5 +639,5 @@ async function pullProfile(div) {
     form.name.value = currentState.pet.name;
     form.location.value = currentState.pet.location;
     img.src = currentState.pet.imageUrl;
-    imgDataURL = currentState.pet.imageUrl;
+    imgDataURL = currentState.pet.imageUrl[0];
 }

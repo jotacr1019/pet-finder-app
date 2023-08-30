@@ -529,7 +529,7 @@ export function initCreateReport(params) {
                     const lat = locationRes.lat;
                     const lng = locationRes.lng;
                     imgToURLCloudinary(imgDataURL).then(
-                        async (cloudinaryRes) => {
+                        async (cloudinaryRes: any) => {
                             const createResponse = await state.createPetInDB({
                                 name,
                                 location,
@@ -567,6 +567,7 @@ export function initCreateReport(params) {
 
 export async function imgToURLCloudinary(imgData) {
     try {
+        const uploadImages = [];
         const formData = new FormData();
         formData.append("file", imgData);
         formData.append("upload_preset", uploadPreset);
@@ -578,8 +579,9 @@ export async function imgToURLCloudinary(imgData) {
             }
         );
         const data = await resp.json();
+        uploadImages.push(data.url);
         console.log("Upload successful:", data);
-        return data.url;
+        return uploadImages;
     } catch (error) {
         console.error("Upload error:", error);
     }
