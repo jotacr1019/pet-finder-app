@@ -100,17 +100,19 @@ export async function getPetById(pets) {
     if (!pets) {
         throw new Error("Se requieren datos en el body");
     }
+
     const petPromises = pets.map(async (pet) => {
         const petFound = await Pet.findOne({
             where: {
                 id: pet.objectID,
             },
         });
-        return petFound.dataValues;
+        return petFound ? petFound.dataValues : null;
     });
 
     const petsFound = await Promise.all(petPromises);
-    return petsFound;
+    const FinalPets = petsFound.filter((pet) => pet !== null);
+    return FinalPets;
 }
 
 export async function getDataOfPet(petId) {
