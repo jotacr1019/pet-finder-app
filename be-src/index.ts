@@ -31,7 +31,11 @@ let bodyParser = require("body-parser");
 myApp.use(bodyParser.urlencoded({ extended: true }));
 myApp.use(bodyParser.json());
 myApp.use(express.json());
-myApp.use(cors());
+myApp.use(
+    cors({
+        methods: ["GET", "POST", "PUT", "DELETE"],
+    })
+);
 
 myApp.use(express.static(path.resolve(__dirname, "../../dist")));
 
