@@ -31,6 +31,13 @@ let bodyParser = require("body-parser");
 myApp.use(bodyParser.urlencoded({ extended: true }));
 myApp.use(bodyParser.json());
 myApp.use(express.json());
+
+myApp.use(express.static(path.resolve(__dirname, "../../dist")));
+
+const port = process.env.PORT || 6008;
+
+const SECRET_KEY = process.env.SECRET_KEY;
+
 myApp.use(
     cors({
         origin: "http://127.0.0.1:8080",
@@ -38,11 +45,7 @@ myApp.use(
     })
 );
 
-myApp.use(express.static(path.resolve(__dirname, "../../dist")));
-
-const port = process.env.PORT || 6008;
-
-const SECRET_KEY = process.env.SECRET_KEY;
+myApp.options("*", cors());
 
 // signup
 myApp.post("/auth", async (req, res) => {
