@@ -38,14 +38,23 @@ const port = process.env.PORT || 6008;
 
 const SECRET_KEY = process.env.SECRET_KEY;
 
-myApp.use(
-    cors({
-        origin: "http://127.0.0.1:8080",
-        methods: ["GET", "POST", "PUT", "DELETE"],
-    })
-);
+myApp.use(cors());
 
-myApp.options("*", cors());
+myApp.use((req, res, next) => {
+    res.append("Access-Control-Allow-Origin", ["*"]);
+    res.append("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
+    res.append("Access-Control-Allow-Headers", "Content-Type");
+    next();
+});
+
+// myApp.use(
+//     cors({
+//         origin: "http://127.0.0.1:8080",
+//         methods: ["GET", "POST", "PUT", "DELETE"],
+//     })
+// );
+
+// myApp.options("*", cors());
 
 // signup
 myApp.post("/auth", async (req, res) => {
