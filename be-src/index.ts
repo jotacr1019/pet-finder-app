@@ -40,7 +40,7 @@ const SECRET_KEY = process.env.SECRET_KEY;
 
 myApp.use(
     cors({
-        origin: "http:localhost:8080",
+        origin: "*",
         methods: ["GET", "POST", "PUT", "DELETE"],
     })
 );
