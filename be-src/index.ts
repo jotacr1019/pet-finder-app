@@ -38,13 +38,13 @@ const port = process.env.PORT || 6008;
 
 const SECRET_KEY = process.env.SECRET_KEY;
 
-myApp.use(
-    cors({
-        origin: "*",
-        methods: ["GET", "POST", "PUT", "DELETE"],
-        allowedHeaders: ["Content-Type", "Authorization"],
-    })
-);
+myApp.use(cors());
+
+// {
+//     origin: "*",
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+//     allowedHeaders: ["Content-Type", "Authorization"],
+// }
 
 myApp.use((req, res, next) => {
     if (req.method === "OPTIONS") {
@@ -52,7 +52,7 @@ myApp.use((req, res, next) => {
         res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
         res.header(
             "Access-Control-Allow-Headers",
-            "Content-Type, Authorization"
+            "Origin, X-Requested-With, Accept, Content-Type, Authorization"
         );
         res.status(200).send();
     } else {
