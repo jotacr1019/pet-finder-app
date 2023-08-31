@@ -27,6 +27,7 @@ dotenv.config();
 
 let cors = require("cors");
 let myApp = express();
+myApp.use(cors());
 let bodyParser = require("body-parser");
 myApp.use(bodyParser.urlencoded({ extended: true }));
 myApp.use(bodyParser.json());
@@ -37,44 +38,6 @@ myApp.use(express.static(path.resolve(__dirname, "../../dist")));
 const port = process.env.PORT || 6008;
 
 const SECRET_KEY = process.env.SECRET_KEY;
-
-myApp.use(cors());
-
-// {
-//     origin: "*",
-//     methods: ["GET", "POST", "PUT", "DELETE"],
-//     allowedHeaders: ["Content-Type", "Authorization"],
-// }
-
-myApp.use((req, res, next) => {
-    if (req.method === "OPTIONS") {
-        res.header("Access-Control-Allow-Origin", "*");
-        res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-        res.header(
-            "Access-Control-Allow-Headers",
-            "Origin, X-Requested-With, Accept, Content-Type, Authorization"
-        );
-        res.status(200).send();
-    } else {
-        next();
-    }
-});
-
-// myApp.use((req, res, next) => {
-//     res.append("Access-Control-Allow-Origin", ["*"]);
-//     res.append("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
-//     res.append("Access-Control-Allow-Headers", "Content-Type");
-//     next();
-// });
-
-// myApp.use(
-//     cors({
-//         origin: "http://127.0.0.1:8080",
-//         methods: ["GET", "POST", "PUT", "DELETE"],
-//     })
-// );
-
-// myApp.options("*", cors());
 
 // signup
 myApp.post("/auth", async (req, res) => {

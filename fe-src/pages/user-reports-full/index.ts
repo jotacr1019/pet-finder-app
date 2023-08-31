@@ -263,7 +263,7 @@ function createCard(pet) {
         </style>
         <header class="card-header is-flex is-justify-content-center">
             <div class="container_img-reports-full is-flex is-justify-content-center is-align-self-center m-2">
-                <img src="${pet.imageUrl}" alt="Pet-Finder-welcome" class="responsive-img_reports-full">
+                <img src="${pet.imageUrl[0]}" alt="Pet-Finder-welcome" class="responsive-img_reports-full">
                     <style>
                         @media(min-width: 550px) {
                             .responsive-img_reports-full {

@@ -646,6 +646,6 @@ async function pullProfile(div) {
     const currentState: any = state.loadStateFromLocalStorage();
     form.name.value = currentState.pet.name;
     form.location.value = currentState.pet.location;
-    img.src = currentState.pet.imageUrl;
+    img.src = currentState.pet.imageUrl[0];
     imgDataURL = currentState.pet.imageUrl[0];
 }
