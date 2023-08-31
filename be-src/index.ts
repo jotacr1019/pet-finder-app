@@ -38,14 +38,19 @@ const port = process.env.PORT || 6008;
 
 const SECRET_KEY = process.env.SECRET_KEY;
 
-myApp.use(cors());
+myApp.use(
+    cors({
+        origin: "http:localhost:8080",
+        methods: ["GET", "POST", "PUT", "DELETE"],
+    })
+);
 
-myApp.use((req, res, next) => {
-    res.append("Access-Control-Allow-Origin", ["*"]);
-    res.append("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
-    res.append("Access-Control-Allow-Headers", "Content-Type");
-    next();
-});
+// myApp.use((req, res, next) => {
+//     res.append("Access-Control-Allow-Origin", ["*"]);
+//     res.append("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
+//     res.append("Access-Control-Allow-Headers", "Content-Type");
+//     next();
+// });
 
 // myApp.use(
 //     cors({
@@ -167,16 +172,6 @@ myApp.post("/pets", authMiddleware, async (req, res) => {
             });
         } else {
             const petData = req.body;
-
-            if (req.method === "OPTIONS") {
-                res.header("Access-Control-Allow-Methods", "POST");
-                res.header(
-                    "Access-Control-Allow-Headers",
-                    "Content-Type, Authorization"
-                );
-                return res.status(204).send();
-            }
-
             const newPet = await createPetInDB(userId, petData);
             res.status(201).json(newPet);
         }
