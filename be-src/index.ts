@@ -177,7 +177,7 @@ myApp.get("/pets", async (req, res) => {
 });
 
 // get data of pet
-myApp.get("/pets/:petId", authMiddleware, async (req, res) => {
+myApp.get("/pets/pet", authMiddleware, async (req, res) => {
     if (req._user === null) {
         res.status(401).json({
             message: "Token inválido",
