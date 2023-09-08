@@ -19,6 +19,7 @@ import {
     getPetsOfUser,
     getPetsAroundAZone,
     getPetById,
+    getDataOfPet,
 } from "./controllers/pet-controller";
 import { sendMessageToUser } from "./lib/resend";
 import { createReportInDB } from "./controllers/report-controller";
@@ -170,6 +171,25 @@ myApp.get("/pets", async (req, res) => {
         } else {
             res.status(404).json({
                 message: "No se han encontrado mascotas",
+            });
+        }
+    }
+});
+
+// get data of pet
+myApp.get("/pets/:petId", authMiddleware, async (req, res) => {
+    if (req._user === null) {
+        res.status(401).json({
+            message: "Token inválido",
+        });
+    } else {
+        const petId = req.query.petId;
+        const petFound = await getDataOfPet(petId);
+        if (petFound) {
+            res.status(302).json(petFound);
+        } else {
+            res.status(404).json({
+                message: "No se ha encontrado el pet",
             });
         }
     }
