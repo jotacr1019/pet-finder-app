@@ -1,6 +1,6 @@
-## Pet Finder App
+# Pet Finder App
 
-Proyecto de la carrera "Software Developer" de APX School.
+##Proyecto de la carrera "Software Developer" de APX School.
 
 :computer: [App demo](https://pet-finder-app-muig.onrender.com)
 
@@ -8,4 +8,4 @@ Proyecto de la carrera "Software Developer" de APX School.
 
 _ _ _
 
-Nota: Al entrar por primera vez a la aplicación, puede que tarde en cargarse, ya que la app está subida en 'render.com' y este servicio después de 15 minutos de no darle uso se 'apaga' o deja de escuchar peticiones.
+####Nota: Al entrar por primera vez a la aplicación, puede que tarde en cargarse, ya que la app está subida en 'render.com' y este servicio después de 15 minutos de no darle uso se 'apaga' o deja de escuchar peticiones.
