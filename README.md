@@ -8,9 +8,9 @@
 
 
 ## Tech Stack
-**Frontend**: TypeScript, Parcel, Custom Elements, Mapbox, Dropzone.
+**Frontend**: TypeScript, Custom Elements, Mapbox, Dropzone, Parcel.
 
-**Backend**: Node, Express, PostgreSQL, Render, Sequelize(ORM), MVC, Algolia.
+**Backend**: NODEjs, Express, PostgreSQL, Sequelize(ORM), Algolia, patrón MVC.
 
 _ _ _
 
