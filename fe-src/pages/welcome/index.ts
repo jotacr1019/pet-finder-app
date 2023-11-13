@@ -9,7 +9,7 @@ export function initWelcome(params) {
     <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
         <div class="navbar-brand is-flex is-justify-content-space-between">
             <div class="navbar-item">
-                <img src="${dogImage}" width="72" height="50">
+                <img src="${dogImage}" alt="dog-logo" width="72" height="50">
             </div>
             <div class="dropdown is-right">
                 <div class="dropdown-trigger">
