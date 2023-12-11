@@ -14,4 +14,5 @@
 
 _ _ _
 
-#### Nota: Al entrar por primera vez a la aplicación, puede que tarde en cargarse, ya que la app está subida en 'render.com' y este servicio después de 15 minutos de no darle uso se 'apaga' o deja de escuchar peticiones.
+> [!NOTE]  
+> Nota: Al entrar por primera vez a la aplicación, puede que tarde en cargarse, ya que la app está subida en 'render.com' y este servicio después de 15 minutos de no darle uso se 'apaga' o deja de escuchar peticiones.
